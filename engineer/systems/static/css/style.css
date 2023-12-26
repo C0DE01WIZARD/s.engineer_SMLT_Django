@@ -1,0 +1,159 @@
+
+header {
+    border:0px solid black;
+    width: 99%; /*на весь экран*/
+    min-height: 16px; /*50 пикселей */
+    margin-top: 0px;
+    top: 0;
+    position: fixed;
+}
+
+#line { /* ЛИНИЯ ПОСЛЕ Header*/
+    height:52.0px;
+    width:100%;
+    border-bottom: 1px solid gray;
+    padding-left:10px
+}
+
+#line2 {
+    height:440px;
+    width:75%;
+    border-bottom: 1px solid gray;
+    padding-left:10px
+}
+
+#attention{
+    font-family: 'CoFo Sans', sans-serif;
+    font-size:14px;
+    height: 157px;
+    width: 141px;
+    border: 0px solid gray;
+    margin-left:273px;
+    margin-top:24px;
+    border-radius:8px;
+    box-shadow: 3px 3px 3px gray;
+}
+
+#attention a{
+    font-family: 'CoFo Sans', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+#verification{
+    font-family: 'CoFo Sans', sans-serif;
+    font-size:14px;
+    height: 169px;
+    width: 141px;
+    border: 0px solid gray;
+    margin-left:473px;
+    margin-top:-185px;
+    border-radius:8px;
+    box-shadow: 3px 3px 3px gray;
+}
+
+#verification a{
+    font-family: 'CoFo Sans', sans-serif;
+    text-decoration: none;
+    color: black;
+
+}
+
+#dicpatching{
+    font-family: 'CoFo Sans', sans-serif;
+    font-size:14px;
+    height: 169px;
+    width: 141px;
+    border: 0px solid gray;
+    margin-left:679px;
+    margin-top:-185px;
+    border-radius:8px;
+    box-shadow: 3px 3px 3px gray;
+}
+
+#dicpatching a{
+    font-family: 'CoFo Sans', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+#news {
+    font-family: 'CoFo Sans', sans-serif;
+    font-size:14px;
+    height: 729px;
+    width: 397px;
+    border: 0px solid gray;
+    margin-left:863px;
+    margin-top:-185px;
+    border-radius:8px;
+    box-shadow: 3px 3px 3px gray;
+
+
+
+}
+
+
+/*SIDENAV*/
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 250px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #e5f2fe;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+   font-family: 'CoFo Sans', sans-serif;
+
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: black;
+    background-color: #ADD8E6;
+    border; 1px;
+    border:0px solid black;
+    border-radius: 5px
+
+}
+
+/* Style page content */
+.main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.samolet {
+width: 100%;
+
+}
+
+.iconbar {
+font-size: 12px;
+padding-bottom: -63px;
+height: 24px;
+
+
+}
+
+.newsphoto{
+    width: 100%;
+    border-radius: 5px;
+
+}

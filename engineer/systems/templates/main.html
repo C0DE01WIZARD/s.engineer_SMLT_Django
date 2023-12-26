@@ -1,0 +1,70 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <title>Главная страница</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!--Добавление стиля-->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/icon.png' %}"> <!--Добавление иконки-->
+    <script src="{% static 'js/script.js' %}"></script>
+
+    <header>
+        <h5>SMLT</h5>
+    </header>
+    <div id="line">
+    </div>
+
+    <div id="attention">
+    <h1 align="center">0</h1>
+        <h4>АВАРИЙ</h4>
+        <a href="#"><h5>Посмотреть</h5></a>
+    </div>
+
+
+     <div id="verification">
+    <h1 align="center">3</h1>
+        <h4>Прибора УУТЭ</h4>
+         <H4>Требуется поверка</H4>
+        <a href="#"><h5>Посмотреть</h5></a>
+    </div>
+
+
+    <div id="dicpatching">
+    <h1 align="center">1</h1>
+        <h4>Низкая температура ГВС</h4>
+
+        <a href="#"><h5>Посмотреть</h5></a>
+    </div>
+
+     <div id="news">
+         <h2 align="center">Новости</h2>
+         <img class="newsphoto" src="{% static 'images/itp.jpg' %}">
+
+         <h4>Инженерные системы (англ. technical building system) — системы здания или сооружения, предназначенные для жизнеобеспечения, выполнения технологических процессов, поддержания комфорта, энерго- и ресурсосбережения, обеспечения безопасности.
+
+Примеры инженерных систем - отопление, вентиляция, канализация, водоснабжение, электрические сети, пожарная сигнализация. </h4>
+    </div>
+
+
+    <!-- Side navigation -->
+    <div class="sidenav">
+        <a><img src="{% static 'images/samicon1.png' %} " class="samolet" align="center"></a>
+        <a href="#"><img class="iconbar" src="{% static 'images/Home.png' %}"> Главная</a><br>
+        <a href="#"><img class="iconbar" src="{% static 'images/EQUIPMENT.png' %}"> Оборудование</a><br>
+        <a href="#"><img class="iconbar" src="{% static 'images/service.png' %}"> Сервис центр</a><br>
+        <a href="#"><img class="iconbar" src="{% static 'images/attention.png' %}"> Аварии</a><br>
+        <a href="#"><img class="iconbar" src="{% static 'images/systems.png' %}"> Инженерные системы</a><br>
+        <a href="#"><img class="iconbar" src="{% static 'images/dispatching.png' %}"> Диспетчеризация</a><br>
+        <a href="#"><img class="iconbar" src="{% static 'images/analitic.png' %}"> Аналитика</a><br>
+        <a href="#"><img class="iconbar" src="{% static 'images/documents.png' %}"> Рабочая документация</a><br>
+        <a href="#"><img class="iconbar" src="{% static 'images/forum.png' %}"> Форум</a><br>
+
+    </div>
+
+    <!-- Page content -->
+
+</head>
+<body>
+
+</body>
+</html>

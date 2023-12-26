@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # myapp
     'systems',
-    'forum_incidents'
+    'forum_incidents',
+    'feedback'
 
 ]
 
@@ -58,7 +60,7 @@ ROOT_URLCONF = 'engineer.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -70,6 +72,12 @@ TEMPLATES = [
         },
     },
 ]
+
+STATIC_URL = '/static/' # какой URL будет у нашей статики
+STATIC_DIR = os.path.join(BASE_DIR, 'static/') # директория нашей статики
+STATICFILES = (os.path.join(BASE_DIR, 'static/')),
+# спсиок из каких директорий собирать нашу статику
+
 
 WSGI_APPLICATION = 'engineer.wsgi.application'
 
