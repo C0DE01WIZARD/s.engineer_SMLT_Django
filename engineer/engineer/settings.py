@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     # myapp
     'systems',
     'forum_incidents',
-    'feedback'
+    'feedback',
+    'users'
 
 ]
 

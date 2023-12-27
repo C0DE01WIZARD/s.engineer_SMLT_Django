@@ -1,12 +1,13 @@
 {% load static %}
 
+
 <html lang="en">
 <head>
     <title>Главная страница</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!--Добавление стиля-->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}"> <!--Добавление стиля-->
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/icon.png' %}"> <!--Добавление иконки-->
-    <script src="{% static 'js/script.js' %}"></script>
+{% block main %}
 
     <header>
         <h5>SMLT</h5>
@@ -60,7 +61,7 @@
         <a href="#"><img class="iconbar" src="{% static 'images/forum.png' %}"> Форум</a><br>
 
     </div>
-
+{% endblock %}
     <!-- Page content -->
 
 </head>
