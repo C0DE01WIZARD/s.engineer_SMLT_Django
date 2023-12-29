@@ -52,17 +52,17 @@
 
     <!-- Side navigation -->
     <div class="sidenav">
-        <a><img src="{% static 'images/samicon1.png' %} " class="samolet" align="center"></a>
-        <a href="#"><img class="iconbar" src="{% static 'images/Home.png' %}"> Главная</a><br>
+        <a href="{% url 'main' %}"><img src="{% static 'images/samicon1.png' %} " class="samolet" align="center"></a>
+        <a href="{% url 'main' %}"><img class="iconbar" src="{% static 'images/Home.png' %}"> Главная</a><br>
         <a href="#"><img class="iconbar" src="{% static 'images/EQUIPMENT.png' %}"> Оборудование</a><br>
         <a href="#" class="dropdown"><img class="iconbar" src="{% static 'images/service.png' %}"> Сервис центр</a><br>
 
-            <ul>
+           <!-- <ul>
                 <a href="#"><span>Техническое обслуживание</span></a><br>
                 <a href="#"><span>Календарь ТО</span></a><br>
                 <a href="#"><span>Работы по наряду</span></a><br>
                 <a href="#"><span>Подготовка систем к ОЗП</span></a>
-            </ul>
+            </ul> -->
         <a href="#"><img class="iconbar" src="{% static 'images/attention.png' %}"> Аварии</a><br>
         <a href="#"><img class="iconbar" src="{% static 'images/systems.png' %}"> Инженерные системы</a><br>
         <a href="#"><img class="iconbar" src="{% static 'images/dispatching.png' %}"> Диспетчеризация</a><br>

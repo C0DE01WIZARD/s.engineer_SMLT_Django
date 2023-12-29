@@ -33,17 +33,17 @@ header {
     margin-left:360px;
 }
 
-
-
-
+.titletext{
+    font-family: 'CoFo Sans', sans-serif;
+     font-size:18px;
 }
 
-
-#line3 { /* ЛИНИЯ ПОСЛЕ Header*/
-    height:52.0px;
+#line{ /* ЛИНИЯ ПОСЛЕ Header*/
+    height:0px;
     width:100%;
     border-bottom: 1px solid gray;
-    padding-left:10px
+    padding-left:10px;
+    position: fixed;
 }
 
 #line2 {
@@ -51,6 +51,7 @@ header {
     width:75%;
     border-bottom: 1px solid gray;
     padding-left:10px
+
 }
 
 #attention{
@@ -186,4 +187,13 @@ height: 24px;
 .newsphoto{
     width: 100%;
     border-radius: 5px;
+}
+
+.photologin{
+    border-radius: 8px;
+    height: 550px;
+    width: 1017px;
+    margin-left: 250px;
+
+}
 

@@ -1,7 +1,9 @@
 {% extends 'main.html' %}
-
+{% load static %}
 {% block main %}
-<h1>Авторизация</h1>
+<img class="photologin" src="{% static 'images/itp.jpg' %}">
+
+<h1 class="titletext" align="center">Авторизация</h1>
 <div class="form-input">
     <form method="post">
         {% csrf_token %}
