@@ -8,7 +8,38 @@ header {
     position: fixed;
 }
 
-#line { /* ЛИНИЯ ПОСЛЕ Header*/
+.headera{
+    width:160px;
+    margin-left:1080px;
+    border-radius:5px;
+    font-family: 'CoFo Sans', sans-serif;
+    font-size:14px;
+    background-color:#e5f2fe;
+    text-decoration: none;
+}
+
+.dec{
+
+    text-decoration: none;
+    color: black;
+
+}
+
+
+.form-input {
+    width: 300px;
+    font-size: 16px;
+    border-radius:6px;
+    margin-left:360px;
+}
+
+
+
+
+}
+
+
+#line3 { /* ЛИНИЯ ПОСЛЕ Header*/
     height:52.0px;
     width:100%;
     border-bottom: 1px solid gray;
@@ -156,4 +187,3 @@ height: 24px;
     width: 100%;
     border-radius: 5px;
 
-}
