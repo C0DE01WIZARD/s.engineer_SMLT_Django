@@ -27,6 +27,7 @@ header {
 
 
 .form-input {
+    font-family: 'CoFo Sans', sans-serif;
     width: 300px;
     font-size: 16px;
     border-radius:6px;
@@ -39,9 +40,9 @@ header {
 }
 
 #line{ /* ЛИНИЯ ПОСЛЕ Header*/
-    height:0px;
+    height:11px;
     width:100%;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #e6f1fc;
     padding-left:10px;
     position: fixed;
 }
@@ -133,7 +134,7 @@ header {
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #e5f2fe;
+    background-color: #f7f9fe;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
 }
@@ -152,7 +153,7 @@ header {
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
     color: black;
-    background-color: #ADD8E6;
+    background-color: #e6f1fc;
     border; 1px;
     border:0px solid black;
     border-radius: 5px
@@ -172,7 +173,7 @@ header {
 }
 
 .samolet {
-width: 100%;
+width: 80%;
 
 }
 
@@ -189,11 +190,50 @@ height: 24px;
     border-radius: 5px;
 }
 
+/* Страница авторизации */
 .photologin{
     border-radius: 8px;
     height: 550px;
     width: 1017px;
     margin-left: 250px;
+    padding-top: 25px;
+}
+
+.btnauth{
+    background-color:#007bfb;
+    color: white;
+    border: none;
+    border-radius:8px;
+    font-family: 'CoFo Sans', sans-serif;
+    font-size: 19px;
+    width:90px;
+    text-align: center;
+}
+
+.formauth{
+
+    padding-left:60px;
 
 }
 
+/* Страница "Оборудование" */
+
+.container {
+  display: flex;
+}
+
+
+.systems{
+    float: center;
+    cursor: pointer;
+    background-color:#007bfb;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius:15px;
+    height: 170px;
+    width: 250px;
+    margin-left:270px;
+    font-family: 'CoFo Sans', sans-serif;
+    position: relative;
+}

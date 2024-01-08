@@ -4,13 +4,14 @@
 <img class="photologin" src="{% static 'images/itp.jpg' %}">
 
 <h1 class="titletext" align="center">Авторизация</h1>
+
 <div class="form-input">
-    <form method="post">
+    <form method="post" class="formauth">
         {% csrf_token %}
         {{ form.as_p }}
-        <p>
-            <button type="submit">Войти</button>
-        </p>
+
+            <button type="submit" class="btnauth">Войти</button>
+
     </form>
 </div>
     {% endblock %}

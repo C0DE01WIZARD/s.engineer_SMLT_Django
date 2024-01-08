@@ -9,11 +9,14 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}"> <!--Добавление стиля-->
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/icon.png' %}"> <!--Добавление иконки-->
 
-{% block main %}
+
     <header>
         <a href="/login" class="dec"><h5 align="center" class="headera">Вход в систему</h5></a>
-    </header><br><br>
+    </header>
+    <br><br>
+
     <div id="line"></div>
+    {% block main %}
 
     <div id="attention">
         <h1 align="center">0</h1>
@@ -48,21 +51,22 @@
             Примеры инженерных систем - отопление, вентиляция, канализация, водоснабжение, электрические сети, пожарная
             сигнализация. </h4>
     </div>
-{% endblock %}
+    {% endblock %}
 
     <!-- Side navigation -->
     <div class="sidenav">
-        <a href="{% url 'main' %}"><img src="{% static 'images/samicon1.png' %} " class="samolet" align="center"></a>
+        <a href="{% url 'main' %}"><img src="{% static 'images/samicon.png' %} " class="samolet" align="center"></a>
         <a href="{% url 'main' %}"><img class="iconbar" src="{% static 'images/Home.png' %}"> Главная</a><br>
-        <a href="#"><img class="iconbar" src="{% static 'images/EQUIPMENT.png' %}"> Оборудование</a><br>
+        <a href="{% url 'equipments' %}"><img class="iconbar" src="{% static 'images/EQUIPMENT.png' %}">
+            Оборудование</a><br>
         <a href="#" class="dropdown"><img class="iconbar" src="{% static 'images/service.png' %}"> Сервис центр</a><br>
 
-           <!-- <ul>
-                <a href="#"><span>Техническое обслуживание</span></a><br>
-                <a href="#"><span>Календарь ТО</span></a><br>
-                <a href="#"><span>Работы по наряду</span></a><br>
-                <a href="#"><span>Подготовка систем к ОЗП</span></a>
-            </ul> -->
+        <!-- <ul>
+             <a href="#"><span>Техническое обслуживание</span></a><br>
+             <a href="#"><span>Календарь ТО</span></a><br>
+             <a href="#"><span>Работы по наряду</span></a><br>
+             <a href="#"><span>Подготовка систем к ОЗП</span></a>
+         </ul> -->
         <a href="#"><img class="iconbar" src="{% static 'images/attention.png' %}"> Аварии</a><br>
         <a href="#"><img class="iconbar" src="{% static 'images/systems.png' %}"> Инженерные системы</a><br>
         <a href="#"><img class="iconbar" src="{% static 'images/dispatching.png' %}"> Диспетчеризация</a><br>
@@ -72,7 +76,10 @@
 
     </div>
 
-    <!-- Page content -->
+    <div class="searchservice">
+
+
+    </div>
 
 </head>
 <body>
