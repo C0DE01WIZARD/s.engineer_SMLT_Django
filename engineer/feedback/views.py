@@ -1,6 +1,4 @@
 from django.shortcuts import render, redirect
-from django.views.generic import ListView
-from .models import *
 from .forms import *
 
 
@@ -15,5 +13,5 @@ def AddFeedback(request):  # форма добавления фильмов
         except:
             form.add_error(None, 'Ошибка записи')
     else:
-        feedback = FeedbackForm()
-    return render(request, 'feedback.html', {'feedback': feedback})  # 'form' присваем значение переменной form
+        form = FeedbackForm()
+    return render(request, 'feedback.html', {'feedback': form})  # 'form' присваем значение переменной form

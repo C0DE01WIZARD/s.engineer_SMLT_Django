@@ -1,8 +1,8 @@
-from django import forms
 from .models import *
+from django import forms
 
 
-class FeedbackForm(forms.ModelForm):
+class FormAdd(forms.ModelForm):
     class Meta:
-        model = Feedback  # используемая модель
+        model = Equipment  # используемая модель
         fields = '__all__'  # какие поля использовать, показывать

@@ -5,8 +5,7 @@ from django.db import models
 
 class Feedback(models.Model):
     name = models.CharField('Имя', max_length=50)
-    text = models.TextField('Введите ваши пожелания и '
-                            'какие улучшения вы хотели бы видеть в наших Барбершопах')
+    text = models.TextField('Текст')
     time_create = models.DateTimeField("Дата создания", auto_now=True)
 
     def __str__(self):
