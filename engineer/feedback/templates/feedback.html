@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block main %}
+
+
+<div>
+    <h1 class="titletext" align="center">Обратная связь</h1>
+    <img class="imgfeedback" src="{% static 'img/feedback.jpg' %}" class="homephoto2" align="center">
+
+    {% for f in feedback %}
+    <div id="add1">
+        <h3 align="center">{{ post }}</h3>
+        <form action="{% url 'feedback' %}" method="post">
+            {% csrf_token %}
+            <div class="form-error">{{ for1m.non_field_errors }}</div>
+
+
+            <p><label class="formadd" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+            <div class="form-error">{{ f.errors }}</div>
+
+            <button type="submit">Отправить отзыв</button>
+            <br>
+        </form>
+    </div>
+
+</div>
+{% endfor %}
+{% endblock %}

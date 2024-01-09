@@ -280,3 +280,12 @@ height: 24px;
     font-family: 'CoFo Sans', sans-serif;
     position: relative;
 }
+
+
+/*Страница "Обратная связь" */
+.imgfeedback{
+    width:600px;
+
+    padding-left:335px;
+
+}

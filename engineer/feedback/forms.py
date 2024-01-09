@@ -1,6 +1,12 @@
 from django import forms
+from .models import *
 
 
-class AddFeedback(forms.Form):
-    username = forms.CharField(label="Логин", widget=forms.TextInput(attrs={'class': 'form-input'}))
-    password = forms.CharField(label="Пароль", widget=forms.PasswordInput(attrs={'class': 'form-input'}))
+class FeedbackForm(forms.ModelForm):
+    class Meta:
+        model = Feedback
+        fields = '__all__'
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'myfield'}),
+            'content': forms.Textarea(attrs={'cols': 160, 'rows': 20})
+        }

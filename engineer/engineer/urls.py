@@ -24,7 +24,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('', include('systems.urls')),
     path('', include('users.urls')),
-    # path('', include('feedback.urls'))
+    path('', include('feedback.urls'))
 
     # path('', RedirectView.as_view(url='/catalog/', permanent=True)),
 ]
