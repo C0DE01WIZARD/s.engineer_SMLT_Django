@@ -1,4 +1,3 @@
-
 header {
     border:0px solid black;
     width: 99%; /*на весь экран*/
@@ -10,11 +9,15 @@ header {
 
 .headera{
     width:160px;
+    height:30px;
     margin-left:1080px;
     border-radius:5px;
     font-family: 'CoFo Sans', sans-serif;
     font-size:14px;
-    background-color:#e5f2fe;
+    background-color:#007bfb;
+    color: white;
+    border: none;
+    border-radius:8px;
     text-decoration: none;
 }
 
@@ -22,17 +25,48 @@ header {
 
     text-decoration: none;
     color: black;
+    margin-top: 100px;
 
 }
 
-
-.form-input {
+.searchservice{
+    border-radius:5px;
     font-family: 'CoFo Sans', sans-serif;
-    width: 300px;
-    font-size: 16px;
-    border-radius:6px;
-    margin-left:360px;
+    font-size:14px;
+
+
 }
+
+.searchservice h5{
+    border-radius:5px;
+    font-family: 'CoFo Sans', sans-serif;
+    font-size:14px;
+
+}
+
+
+
+
+
+.addfeedback {
+    text-decoration: none;
+
+}
+
+
+.addfeedback h5 {
+    width:150px;
+    height:25px;
+    color:white;
+    background-color:#007bfb;
+    font-family: 'CoFo Sans', sans-serif;
+    border-radius:5px;
+    text-decoration: none;
+    margin-left:98px;
+    margin-top:29px;
+
+}
+
 
 .titletext{
     font-family: 'CoFo Sans', sans-serif;
@@ -45,6 +79,7 @@ header {
     border-bottom: 1px solid #e6f1fc;
     padding-left:10px;
     position: fixed;
+
 }
 
 #line2 {
@@ -66,6 +101,16 @@ header {
     border-radius:8px;
     box-shadow: 3px 3px 3px gray;
 }
+
+/* Страница "Авторизация" */
+.form-input {
+    font-family: 'CoFo Sans', sans-serif;
+    width: 300px;
+    font-size: 16px;
+    border-radius:6px;
+    margin-left:360px;
+}
+
 
 #attention a{
     font-family: 'CoFo Sans', sans-serif;
@@ -110,18 +155,16 @@ header {
     color: black;
 }
 
-#news {
+.info {
     font-family: 'CoFo Sans', sans-serif;
-    font-size:14px;
-    height: 729px;
+    font-size:15px;
+    height: 700px;
     width: 397px;
     border: 0px solid gray;
     margin-left:863px;
     margin-top:-185px;
     border-radius:8px;
     box-shadow: 3px 3px 3px gray;
-
-
 
 }
 
@@ -174,6 +217,7 @@ header {
 
 .samolet {
 width: 80%;
+text-decoration: none;
 
 }
 
@@ -181,6 +225,7 @@ width: 80%;
 font-size: 12px;
 padding-bottom: -63px;
 height: 24px;
+
 
 
 }
@@ -218,9 +263,7 @@ height: 24px;
 
 /* Страница "Оборудование" */
 
-.container {
-  display: flex;
-}
+
 
 
 .systems{

@@ -8,25 +8,27 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'css/main.css' %}"> <!--Добавление стиля-->
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/icon.png' %}"> <!--Добавление иконки-->
-
+    <script src="{% static 'js/main.js' %}"></script>
 
     <header>
         <a href="/login" class="dec"><h5 align="center" class="headera">Вход в систему</h5></a>
     </header>
     <br><br>
 
+
     <div id="line"></div>
     {% block main %}
 
+    <div></div>
     <div id="attention">
-        <h1 align="center">0</h1>
-        <h4>АВАРИЙ</h4>
+        <h1 align="left">0</h1>
+        <h4>АВАРИЙ</h4><br>
         <a href="#"><h5>Посмотреть</h5></a>
     </div>
 
 
     <div id="verification">
-        <h1 align="center">3</h1>
+        <h1 align="left">3</h1>
         <h4>Прибора УУТЭ</h4>
         <H4>Требуется поверка</H4>
         <a href="#"><h5>Посмотреть</h5></a>
@@ -34,22 +36,30 @@
 
 
     <div id="dicpatching">
-        <h1 align="center">1</h1>
-        <h4>Низкая температура ГВС</h4>
+        <h1 align="left">1</h1>
+        <h4>Низкая температура ГВС</h4><br>
 
         <a href="#"><h5>Посмотреть</h5></a>
     </div>
 
-    <div id="news">
-        <h2 align="center">Новости</h2>
+    <div class="info">
+
+        <h3 align="center">Информация о системе s.engineer</h3>
         <img class="newsphoto" src="{% static 'images/itp.jpg' %}">
 
-        <h4>Инженерные системы (англ. technical building system) — системы здания или сооружения, предназначенные для
-            жизнеобеспечения, выполнения технологических процессов, поддержания комфорта, энерго- и ресурсосбережения,
-            обеспечения безопасности.
+        <h4>Веб-сервис s.engineer, предназначен для контроля работы инженерных систем и выполнениия
+            ремонтных работ на объекте. Данное приложение включает огромный набор инструментов для работы:<br>
+            <img class="iconbar" src="{% static 'images/EQUIPMENT.png' %}"> Добавление оборудования<br>
+            <img class="iconbar" src="{% static 'images/attention.png' %}"> Контроль и фиксация аварий<br>
+            <img class="iconbar" src="{% static 'images/analitic.png' %}"> Аналитика полученных данных<br>
+            <img class="iconbar" src="{% static 'images/documents.png' %}"> Удобный просмотр рабочей документации<br>
+            <img class="iconbar" src="{% static 'images/forum.png' %}"> Форум для обсуждения<br>
+            <img class="iconbar" src="{% static 'images/dispatching.png' %}"> Получение и вывод параметров работы
+            инженерного оборудования (при наличии диспетчеризации)<br></h4>
 
-            Примеры инженерных систем - отопление, вентиляция, канализация, водоснабжение, электрические сети, пожарная
-            сигнализация. </h4>
+        <a href="" class="addfeedback"><h5 align="center">Написать отзыв</h5></a>
+
+
     </div>
     {% endblock %}
 
@@ -77,7 +87,7 @@
     </div>
 
     <div class="searchservice">
-
+        <h5>Сервисы сайта</h5>
 
     </div>
 
