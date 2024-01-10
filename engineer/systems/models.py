@@ -10,7 +10,7 @@ class Address(models.Model):
     corps = models.CharField('Корпус', max_length=50, blank=True, default='')
 
     def __str__(self):
-        return f'Улица: {self.street}, дом {self.home}, корпус{self.corps}'
+        return f'г.{self.city}, поселение {self.settlement}, улица {self.street}, дом {self.home}{self.corps}'
 
     class Meta:
         verbose_name = 'Адрес'
@@ -46,6 +46,7 @@ class Service_company(models.Model):
 
 class Systems(models.Model):
     system_name = models.CharField('Наименование системы', max_length=50)
+    full_name = models.CharField("Полное название", max_length=100, default='')
     location = models.CharField('Местонахождение', max_length=50)
     service_company = models.ForeignKey(Service_company, on_delete=models.CASCADE,
                                         verbose_name='Сервисная компания по обслуживанию')
@@ -60,12 +61,15 @@ class Systems(models.Model):
 
 class Equipment(models.Model):
     """Создаем класс модели Оборудование"""
+
     equipment = models.CharField('Название оборудования', max_length=50)
     system = models.ForeignKey(Systems, on_delete=models.CASCADE,
                                verbose_name='Выберите систему')
     manufacturer = models.CharField('Производитель', max_length=50)
     model = models.CharField('Модель оборудования', max_length=50)
     year = models.IntegerField('Год ввода в эксплуатацию')
+    address = models.ForeignKey(Address, on_delete=models.CASCADE, verbose_name='Адрес', default='')
+    number = models.CharField("Номер ИТП (если присвоено)", max_length=20, default='')
 
     def __str__(self):
         return self.equipment

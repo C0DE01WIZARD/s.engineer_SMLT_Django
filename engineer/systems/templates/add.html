@@ -1,9 +1,9 @@
 {% extends 'main.html' %}
 {% load static %}
 {% block main %}
-
+ <h1 class="titletext" align="center">Добавить оборудование</h1>
 <div class="add">
-    <h1 class="titletext" align="center">Добавить оборудование</h1>
+
     <div id="add">
         <h3 align="center">{{ post }}</h3>
         <form action="{% url 'add_equipments' %}" method="post"> <!--перенаправление url '' означает к какой форме мы должны обратиться -->
@@ -14,7 +14,7 @@
             <p><label class="formadd" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
             <div class="form-error">{{ f.errors }}</div>
             {% endfor %}
-            <button type="submit">Добавить</button><br>
+            <button class="btnfeedback" type="submit">Добавить</button><br>
         </form>
 
     </div>

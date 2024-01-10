@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block main %}
+<h1 class="titletext" align="center">Список оборудования ИТП</h1>
+{% for l in list %}
+<div class="addequipments">
+    <h3><strong>Адрес: {{ l.address }}</strong><br></h3>
+    Номер ИТП: {{ l.number }}<br>
+    Наименование оборудования:{{ l.equipment }}<br>
+</div>
+{% endfor %}<br>
+<a href="{% url 'add_equipments' %}" class="btnaddequipments">Добавить оборудование</a><br>
+{% endblock %}

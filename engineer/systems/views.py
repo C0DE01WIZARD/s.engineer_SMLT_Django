@@ -11,6 +11,12 @@ class AddEquipments(ListView):
     context_object_name = 'add_equipments'
 
 
+class List_Equimpents(ListView):
+    model = Equipment
+    template_name = "list_equipments.html"
+    context_object_name = 'list'
+
+
 def main(request):
     return render(request, "main.html")
 
@@ -21,7 +27,8 @@ class Equipments(ListView):
     context_object_name = 'systems'
 
 
-def add(request):  # форма добавления фильмов
+def add(request):
+    "Функция добавления оборудования"
     if request.method == 'POST':
         form = FormAdd(request.POST)
         if form.is_valid():
@@ -29,7 +36,7 @@ def add(request):  # форма добавления фильмов
             try:
                 form.save()
                 print(form.cleaned_data, 'Данные переданы через POST запрос!!!')
-                return redirect('main')
+                return redirect('list_equipments')
             except:
                 form.add_error(None, 'Ошибка добавления поста')
     else:

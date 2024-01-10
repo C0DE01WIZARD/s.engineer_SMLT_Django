@@ -111,10 +111,10 @@ header {
 /* Страница "Авторизация" */
 .form-input {
     font-family: 'CoFo Sans', sans-serif;
-    width: 300px;
-    font-size: 16px;
-    border-radius:6px;
-    margin-left:360px;
+    width: 398px;
+    font-size: 23px;
+    border-radius:8px;
+    margin-left:198px;
 }
 
 
@@ -263,7 +263,8 @@ height: 24px;
 
 .formauth{
 
-    padding-left:60px;
+    margin-left:60px;
+    margin-top:15px;
 
 }
 
@@ -277,8 +278,8 @@ height: 24px;
     text-align: center;
     border: none;
     border-radius:15px;
-    height: 190px;
-    width: 250px;
+    height: 240px;
+    width: 350px;
     margin-left:270px;
     font-family: 'CoFo Sans', sans-serif;
     position: relative;
@@ -309,6 +310,50 @@ height: 24px;
     transition: all 600ms ease;
 }
 
+.btnfeedback{
+    background-color:#007bfb;
+    color: white;
+    border: none;
+    border-radius:8px;
+    font-family: 'CoFo Sans', sans-serif;
+    font-size: 16px;
+    width:120px;
+    height:30px;
+    text-align: center;
+    margin-left:40px;
+    text-decoration: none;
+}
+
+.addequipments{
+    font-family: 'CoFo Sans', sans-serif;
+    font-size: 14px;
+    height:800px;
+    align:center;
+    border-radius:8px;
+    border: 0px solid black;
+    margin-top:10px;
+    margin-left:256px;
+    padding: 4px 3px;
+    width:449px;
+    height:140px;
+     box-shadow: 3px 3px 3px gray;
+}
+
+.btnaddequipments{
+    background-color:#007bfb;
+    color: white;
+    border: none;
+    border-radius:8px;
+    font-family: 'CoFo Sans', sans-serif;
+    font-size: 18px;
+    width:125px;
+    height:45px;
+    margin-left:256px;
+    padding-top:6px;
+    padding:2px 3px;
+    text-decoration: none;
+}
+
 
 /*Страница "Обратная связь" */
 .imgfeedback{
@@ -319,12 +364,19 @@ height: 24px;
 
 
 .add{
+
+    font-family: 'CoFo Sans', sans-serif;
+    font-size: 14px;
+    float:left;
     height:800px;
     align:center;
     margin-top:10px;
-    margin-left:460px;
-    width:100%;
+    margin-left:530px;
+    width:195px;
+    height:380px;
 }
+
+
 
 .form-label{
     font-family: 'CoFo Sans', sans-serif;
