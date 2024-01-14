@@ -1,8 +1,14 @@
+from django.http import HttpResponseNotFound
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
 
 from .forms import FormAdd
 from .models import *
+
+
+def page_not_found(request, exception):
+    message = "<h1>404 Страница не найдена</h1>"
+    return HttpResponseNotFound(message)
 
 
 class AddEquipments(ListView):
@@ -32,13 +38,12 @@ def add(request):
     if request.method == 'POST':
         form = FormAdd(request.POST)
         if form.is_valid():
-            # print(form.cleaned_data, 'Данные переданы через POST запрос!!!')
             try:
                 form.save()
                 print(form.cleaned_data, 'Данные переданы через POST запрос!!!')
                 return redirect('list_equipments')
             except:
-                form.add_error(None, 'Ошибка добавления поста')
+                form.add_error(None, 'Ошибка добавления оборудования')
     else:
         form = FormAdd()
-    return render(request, 'add.html', {'form': form})  # 'form' присваем значение переменной form
+    return render(request, 'add.html', {'form': form})

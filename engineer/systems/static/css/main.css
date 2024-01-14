@@ -15,9 +15,10 @@ header {
 
 .headera{
     width:160px;
-    height:30px;
+    height:25px;
     margin-left:1080px;
     border-radius:5px;
+    padding: 2px 2px;
     font-family: 'CoFo Sans', sans-serif;
     font-size:14px;
     background-color:#007bfb;
@@ -111,7 +112,7 @@ header {
 /* Страница "Авторизация" */
 .form-input {
     font-family: 'CoFo Sans', sans-serif;
-    width: 398px;
+    width: -5px;
     font-size: 23px;
     border-radius:8px;
     margin-left:198px;
@@ -244,8 +245,8 @@ height: 24px;
 /* Страница авторизации */
 .photologin{
     border-radius: 8px;
-    height: 550px;
-    width: 1017px;
+    height: 483px;
+    width: 1015px;
     margin-left: 250px;
     padding-top: 25px;
 }
@@ -256,7 +257,7 @@ height: 24px;
     border: none;
     border-radius:8px;
     font-family: 'CoFo Sans', sans-serif;
-    font-size: 19px;
+    font-size: 24px;
     width:90px;
     text-align: center;
 }
@@ -269,20 +270,31 @@ height: 24px;
 }
 
 /* Страница "Оборудование" */
+.container{
+    font-family: 'CoFo Sans', sans-serif;
+    font-size: 17px;
+    height:241px;
+    width:1008px;
+    margin-left:253px;
+
+}
+
+
+
 
 .systems{
-    float: center;
-    cursor: pointer;
+
     background-color:#007bfb;
     color: white;
     text-align: center;
     border: none;
     border-radius:15px;
-    height: 240px;
+    height: 260px;
     width: 350px;
-    margin-left:270px;
+    margin-left:6px;
     font-family: 'CoFo Sans', sans-serif;
     position: relative;
+    padding: 1px px;
 }
 
 .btnaddequipment{
@@ -336,7 +348,7 @@ height: 24px;
     padding: 4px 3px;
     width:449px;
     height:140px;
-     box-shadow: 3px 3px 3px gray;
+    box-shadow: 3px 3px 3px gray;
 }
 
 .btnaddequipments{
@@ -353,6 +365,15 @@ height: 24px;
     padding:2px 3px;
     text-decoration: none;
 }
+
+.title_equipments{
+
+    width:636px;
+    height:232px;
+    margin-left:363px;
+    margin-top:-235px;
+}
+
 
 
 /*Страница "Обратная связь" */

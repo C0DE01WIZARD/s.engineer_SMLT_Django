@@ -5,12 +5,14 @@
 {% for sys in systems %}
 <div class="container">
     <div class="systems">
-        <h4> Система: {{ sys.system_name}}</h4>
+        <h2> Система: {{ sys.system_name}}</h2>
         <h4> Полное название: {{ sys.full_name}}</h4>
         <h4>Обслуживающая компания: {{ sys.service_company}}</h4>
         <a href="{% url 'add_equipments' %}" class="btnaddequipment">Добавить оборудование</a><br><br>
         <a href="{% url 'list_equipments' %}" class="btnaddequipment">Список оборудования</a>
     </div>
+
+    <div class="title_equipments">{{sys.title}}</div>
 </div><br>
 {% endfor %}
 {% endblock %}

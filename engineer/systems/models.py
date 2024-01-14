@@ -46,6 +46,7 @@ class Service_company(models.Model):
 
 class Systems(models.Model):
     system_name = models.CharField('Наименование системы', max_length=50)
+    title = models.TextField('Описание', max_length=500, default='')
     full_name = models.CharField("Полное название", max_length=100, default='')
     location = models.CharField('Местонахождение', max_length=50)
     service_company = models.ForeignKey(Service_company, on_delete=models.CASCADE,
