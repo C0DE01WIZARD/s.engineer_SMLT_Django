@@ -16,7 +16,6 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -28,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["127.0.0.1"]
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,11 +36,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # myapp
+    # my apps
     'systems',
     'forum_incidents',
     'feedback',
-    'users'
+    'users',
+    'dispatching'
 
 ]
 
@@ -62,7 +61,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
-        'APP_DIRS': True,
+        'APP_DIRS': True,  # указывает в каком приложении искать шаблоны
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -74,14 +73,13 @@ TEMPLATES = [
     },
 ]
 
-STATIC_URL = '/static/' # какой URL будет у нашей статики
-STATIC_DIR = os.path.join(BASE_DIR, 'static/') # директория нашей статики
+STATIC_URL = '/static/'  # какой URL будет у нашей статики
+STATIC_DIR = os.path.join(BASE_DIR, 'static/')  # директория нашей статики
 STATICFILES = (os.path.join(BASE_DIR, 'static/')),
 # спсиок из каких директорий собирать нашу статику
 
 
 WSGI_APPLICATION = 'engineer.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -96,7 +94,6 @@ DATABASES = {
         'PORT': '',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -116,7 +113,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -127,7 +123,6 @@ TIME_ZONE = 'Europe/Moscow'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/

@@ -24,7 +24,8 @@ class List_Equimpents(ListView):
 
 
 def main(request):
-    return render(request, "main.html")
+    data = {'title': 'Главная страница'}
+    return render(request, "main.html", data)
 
 
 class Equipments(ListView):
