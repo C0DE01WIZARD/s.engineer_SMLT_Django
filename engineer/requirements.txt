@@ -1,5 +1,5 @@
 asgiref==3.7.2
-Django==5.0
+Django==5.0.1
 graphviz==0.20.1
 psycopg2==2.9.9
 sqlparse==0.4.4
