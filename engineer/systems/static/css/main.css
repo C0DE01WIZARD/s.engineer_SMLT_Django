@@ -185,24 +185,24 @@ header {
     top: 0; /* Stay at the top */
     left: 0;
     background-color: #f7f9fe;
+    color:red;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
 }
 
 /* The navigation menu links */
-.sidenav a {
+.sidenav a{
    font-family: 'CoFo Sans', sans-serif;
-
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 16px;
-    color: black;
+    color: #596161;
     display: block;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-    color: black;
+    color: #007bfb;
     background-color: #e6f1fc;
     border; 1px;
     border:0px solid black;
@@ -405,4 +405,28 @@ height: 24px;
 
 }
 
+
+/* Страница "Диспетчеризация" */
+
+.dispatchinghome{
+    font-family: 'CoFo Sans', sans-serif;
+
+    color:white;
+    background-color:#007bfb;
+    width: 80%;
+    height: 80%;
+    margin-left:249px;
+
+    border-radius:8px;
+}
+
+.dispatchinghome td{
+    font-size: 13px;
+    color:white;
+}
+
+.dispatchinghome th{
+    font-size: 13px;
+    color:white;
+}
 

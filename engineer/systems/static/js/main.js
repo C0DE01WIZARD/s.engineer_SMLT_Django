@@ -1,6 +1,10 @@
-$(window).scroll(function() {
-    if ($(document).scrollTop() > 600 && $("#myModal").attr("displayed") === "false") {
-        $('#myModal').modal('show');
-        $("#myModal").attr("displayed", "true");
-    }
-});
+import React from 'react'
+import {render} from'react-dom'
+
+function HelloWorld!!!(){
+    return(
+        <div>
+            <h1>HelloWorld</h1>
+
+    )
+}

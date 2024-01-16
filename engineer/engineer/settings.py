@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^d&ghx3t$6y2js*29nbvq4%_m8=ubj_rrs9^^^1fib_oa)&+ns
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
 
 # Application definition
 
@@ -36,12 +36,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # my apps
+    # adding apps
     'systems',
     'forum_incidents',
     'feedback',
     'users',
-    'dispatching'
+    'dispatching',
+    'django.contrib.postgres'  # это модуль Django, который предоставляет интеграцию с базой данных PostgreSQL
 
 ]
 

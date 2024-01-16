@@ -8,6 +8,7 @@
     <h3><strong>Адрес: {{ l.address }}</strong><br></h3>
     Номер ИТП: {{ l.number }}<br>
     Наименование оборудования:{{ l.equipment }}<br>
+    Система: {{ l.system }}<br>
 </div>
 {% endfor %}<br>
 <a href="{% url 'add_equipments' %}" class="btnaddequipments">Добавить оборудование</a><br>

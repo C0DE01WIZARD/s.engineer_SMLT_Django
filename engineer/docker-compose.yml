@@ -1,7 +1,16 @@
-version: '3.9'
+# Определение версии Docker Compose и начало описания сервисо
+version: '3'
+
 services:
-   web:
-       build: ..
-       command: python manage.py runserver localhost:8000
+   django:
+       # Сборка образа для сервиса django из текущей директории
+       build: .
+       # Задание имени контейнера для сервиса django
+       container_name: django
+       # Задание команды, которую нужно запустить при запуске контейнера для сервиса django
+       command: > 
+        sh -c "python manage.py runserver 0.0.0.0:8000"
+       volumes:
+         - .:/usr/src/app
        ports:
-           - 8000:8000
+           - '8000:8000'
