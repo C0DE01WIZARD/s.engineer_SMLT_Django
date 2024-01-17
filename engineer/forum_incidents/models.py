@@ -26,10 +26,22 @@ class Types_incidents(models.Model):
         verbose_name_plural = 'Тип проишествия'
 
 
+class Danger_level(models.Model):
+    type = models.CharField('Критичность', max_length=100)
+
+    def __str__(self):
+        return self.type
+
+    class Meta:
+        verbose_name = 'Критичность'
+        verbose_name_plural = 'Критичность'
+
+
 class Incidents(models.Model):
     date = models.DateTimeField('Дата проишествия')
     address = models.ForeignKey(Address, verbose_name='Выберите адрес', on_delete=models.CASCADE)
     equipment = models.ForeignKey(Equipment, verbose_name='Выберите оборудование', on_delete=models.CASCADE)
+    danger_level = models.ForeignKey(Danger_level, verbose_name='Критичность', on_delete=models.CASCADE, default='')
     types_incidents = models.ForeignKey(Types_incidents, verbose_name='Тип проишествия', on_delete=models.CASCADE)
     title = models.TextField('Описание проишествия', max_length=1000)
     incident_analysis = models.TextField('Анализ проишествия', max_length=100)

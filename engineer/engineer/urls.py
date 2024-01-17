@@ -11,9 +11,9 @@ urlpatterns = [
     path('', include('users.urls')),
     path('', include('feedback.urls')),
     path('', include('dispatching.urls')),
+    path('', include('forum_incidents.urls')),
+    # path('', include('emergency.urls'))
 
 ]
 
 handler404 = page_not_found  # 404 Not found
-
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
