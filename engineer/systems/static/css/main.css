@@ -430,3 +430,34 @@ height: 24px;
     color:white;
 }
 
+
+/*Страница "Проишествия" */
+.emergency{
+    background-color:#007bfb;
+    color: white;
+    text-align: cente;
+    border: none;
+    border-radius:15px;
+    height: 222px;
+    width: 1000px;
+    margin-left:6px;
+    font-family: 'CoFo Sans', sans-serif;
+    font-size:15px;
+    position: relative;
+    padding: 4px 4px;
+}
+
+.btnaddemergency{
+    background-color:#007bfb;
+    color: white;
+    border: none;
+    border-radius:8px;
+    font-family: 'CoFo Sans', sans-serif;
+    font-size: 16px;
+    width:120px;
+    height:50px;
+    text-align: center;
+    margin-left:40px;
+
+
+}

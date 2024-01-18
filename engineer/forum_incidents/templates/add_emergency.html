@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block main %}
+<title>{{title}}</title>
+<h1 class="titletext" align="center">Добавить проишествие</h1>
+<div class="add">
+    <div id="add">
+        <h3 align="center">{{ post }}</h3>
+        <form action="{% url 'add_emergency' %}" method="post">
+            {% csrf_token %}
+            <div class="form-error">{{ form.non_field_errors }}</div>
+
+            {% for e in emergency %}
+            <p><label class="formadd" for="{{ e.id_for_label }}">{{e.label}} </label>{{ e }}</p>
+            <div class="form-error">{{ e.errors }}</div>
+            {% endfor %}
+            <button class="btnaddemergency" type="submit">Добавить проишествие</button>
+            <br>
+        </form>
+
+    </div>
+</div>
+{% endblock %}

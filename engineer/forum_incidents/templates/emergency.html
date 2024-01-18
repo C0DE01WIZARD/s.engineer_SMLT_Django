@@ -2,26 +2,30 @@
 {% load static %}
 {% block main %}
 <title>{{title}}</title>
-<h1 class="titletext" align="center">Добавить проишествие</h1>
-<div class="add">
 
-    <div id="add">
-        <h3 align="center">{{ post }}</h3>
-        <form action="{% url 'add_equipments' %}" method="post">
-            <!--перенаправление url '' означает к какой форме мы должны обратиться -->
-            {% csrf_token %} <!-- Защита формы от csrf атак, дублирующих сайтов, сопоставлением токенов -->
-            <div class="form-error">{{ form.non_field_errors }}</div>
+<h1 class="titletext" align="center">Проишествия на объекте</h1>
 
-            {% for f in form %}
-            <p><label class="formadd" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
-            <div class="form-error">{{ f.errors }}</div>
-            {% endfor %}
-            <button class="btnfeedback" type="submit">Добавить</button>
-            <br>
-        </form>
+{% for e in emergency %}
+<div class="container">
+    <div class="emergency">
+        <h3>Адрес: {{ e.address }}</h3>
+        Дата:{{ e.date }}<br>
+        Время:{{ e.times }}<br>
+
+        Оборудование: {{ e.equipment }}<br>
+        Критичность: {{ e.danger_level }}<br>
+        Тип проишествия: {{ e.types_incidents }}<br>
+        Анализ прошествия: {{ e.title }}<br>
+        Статус: {{ e.status_condition }}<br><br>
+         <a href="{% url 'add_emergency' %}"
+            class="btnaddequipment">Добавить проишествие</a>
+        <a href="#" class="btnaddequipment">Удалить</a>
+         <a href="#" class="btnaddequipment">Редактировать</a>
+
+
 
     </div>
+    <a href="{% url 'add_emergency' %}" class="btnaddequipment">Добавить проишествие</a>
 </div>
-
-
+{% endfor %}
 {% endblock %}

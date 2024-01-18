@@ -12,7 +12,7 @@ urlpatterns = [
     path('', include('feedback.urls')),
     path('', include('dispatching.urls')),
     path('', include('forum_incidents.urls')),
-    # path('', include('emergency.urls'))
+    #path('', include('emergency.urls'))
 
 ]
 
