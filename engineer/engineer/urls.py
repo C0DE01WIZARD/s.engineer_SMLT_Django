@@ -12,8 +12,12 @@ urlpatterns = [
     path('', include('feedback.urls')),
     path('', include('dispatching.urls')),
     path('', include('forum_incidents.urls')),
-    #path('', include('emergency.urls'))
+    path('', include('documentation.urls')),
+    # path('', include('emergency.urls'))
 
 ]
 
 handler404 = page_not_found  # 404 Not found
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

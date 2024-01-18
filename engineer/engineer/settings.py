@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'feedback',
     'users',
     'dispatching',
+    'documentation',
     'django.contrib.postgres'  # это модуль Django, который предоставляет интеграцию с базой данных PostgreSQL
 
 ]
@@ -69,6 +70,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media'
             ],
         },
     },
@@ -77,8 +79,9 @@ TEMPLATES = [
 STATIC_URL = '/static/'  # какой URL будет у нашей статики
 STATIC_DIR = os.path.join(BASE_DIR, 'static/')  # директория нашей статики
 STATICFILES = (os.path.join(BASE_DIR, 'static/')),
-# спсиок из каких директорий собирать нашу статику
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 WSGI_APPLICATION = 'engineer.wsgi.application'
 

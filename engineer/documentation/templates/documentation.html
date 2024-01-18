@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block main %}
+<title>{{title}}</title>
+<h1 class="titletext" align="center">Добавить рабочую документацию</h1>
+<div class="add">
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Загрузить</button>
+  </form>
+</div><br>
+  <a href="{% url 'main' %}" class="btnfeedback">Вернуться на главную страницу</a>
+{% endblock %}
