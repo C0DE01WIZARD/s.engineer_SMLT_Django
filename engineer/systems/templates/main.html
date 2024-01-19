@@ -69,7 +69,7 @@
         <a href="{% url 'main' %}"><img class="iconbar" src="{% static 'images/Home.png' %}"> Главная</a><br>
         <a href="{% url 'equipments' %}"><img class="iconbar" src="{% static 'images/EQUIPMENT.png' %}">
             Оборудование</a><br>
-        <a href="#" class="dropdown"><img class="iconbar" src="{% static 'images/service.png' %}"> Сервис центр</a><br>
+        <a href="{% url 'service_home_page' %}" class="dropdown"><img class="iconbar" src="{% static 'images/service.png' %}"> Сервис</a><br>
 
         <!-- <ul>
              <a href="#"><span>Техническое обслуживание</span></a><br>

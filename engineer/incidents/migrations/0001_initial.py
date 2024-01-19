@@ -44,8 +44,8 @@ class Migration(migrations.Migration):
                 ('incident_analysis', models.TextField(max_length=1000, verbose_name='Описание проишествия')),
                 ('address', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='systems.address', verbose_name='Выберите адрес')),
                 ('equipment', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='systems.equipment', verbose_name='Выберите оборудование')),
-                ('status_condition', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='forum_incidents.status', verbose_name='Выберите статус')),
-                ('types_incidents', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='forum_incidents.types_incidents', verbose_name='Тип проишествия')),
+                ('status_condition', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='incidents.status', verbose_name='Выберите статус')),
+                ('types_incidents', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='incidents.types_incidents', verbose_name='Тип проишествия')),
             ],
             options={
                 'verbose_name': 'Проишествие',

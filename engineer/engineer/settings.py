@@ -39,11 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # adding apps
     'systems',
-    'forum_incidents',
+    'incidents',
     'feedback',
     'users',
     'dispatching',
     'documentation',
+    'service',
     'django.contrib.postgres'  # это модуль Django, который предоставляет интеграцию с базой данных PostgreSQL
 
 ]

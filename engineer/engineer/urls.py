@@ -11,8 +11,9 @@ urlpatterns = [
     path('', include('users.urls')),
     path('', include('feedback.urls')),
     path('', include('dispatching.urls')),
-    path('', include('forum_incidents.urls')),
+    path('', include('incidents.urls')),
     path('', include('documentation.urls')),
+    path('', include('service.urls')),
     # path('', include('emergency.urls'))
 
 ]
