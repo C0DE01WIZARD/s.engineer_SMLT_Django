@@ -48,12 +48,15 @@ header {
     border-radius:5px;
     font-family: 'CoFo Sans', sans-serif;
     font-size:14px;
+}
 
+.water{
+    font-family: 'CoFo Sans', sans-serif;
+    margin-left:485px;
 }
 
 
-
-
+/* Добавление обратной связи */
 
 .addfeedback {
     text-decoration: none;
@@ -103,7 +106,7 @@ header {
     height: 157px;
     width: 141px;
     border: 0px solid gray;
-    margin-left:273px;
+    margin-left:-221px;
     margin-top:24px;
     border-radius:8px;
     box-shadow: 3px 3px 3px gray;
@@ -131,7 +134,7 @@ header {
     height: 169px;
     width: 141px;
     border: 0px solid gray;
-    margin-left:473px;
+    margin-left:-15px;
     margin-top:-185px;
     border-radius:8px;
     box-shadow: 3px 3px 3px gray;
@@ -148,9 +151,9 @@ header {
     font-family: 'CoFo Sans', sans-serif;
     font-size:14px;
     height: 169px;
-    width: 141px;
+    width: 181px;
     border: 0px solid gray;
-    margin-left:679px;
+    margin-left:180px;
     margin-top:-185px;
     border-radius:8px;
     box-shadow: 3px 3px 3px gray;
@@ -169,7 +172,7 @@ header {
     width: 397px;
     border: 0px solid gray;
     margin-left:863px;
-    margin-top:-185px;
+    margin-top:-694px;
     border-radius:8px;
     box-shadow: 3px 3px 3px gray;
 

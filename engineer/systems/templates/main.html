@@ -19,28 +19,80 @@
     <div id="line"></div>
     {% block main %}
 
-    <div></div>
-    <div id="attention">
-        <h1 align="left">0</h1>
-        <h4>АВАРИЙ</h4><br>
-        <a href="#"><h5>Посмотреть</h5></a>
+    <div class="water"><h2>ИТП, ВК, ОВ</h2>
+        <div id="attention">
+            <h1 align="left">0</h1>
+            <h4>АВАРИЙ</h4><br>
+            <a href="#"><h5>Посмотреть</h5></a>
+        </div>
+
+
+        <div id="verification">
+            <h1 align="left">3</h1>
+            <h4>Прибора УУТЭ</h4>
+            <H4>Требуется поверка</H4>
+            <a href="#"><h5>Посмотреть</h5></a>
+        </div>
+
+
+        <div id="dicpatching">
+            <h1 align="left">1</h1>
+            <h4>Низкая температура ГВС</h4><br>
+
+            <a href="#"><h5>Посмотреть</h5></a>
+        </div>
+    </div>
+
+    <div class="water"><h2 align="left">Лифты</h2>
+        <div id="attention">
+            <h1 align="left">0</h1>
+            <h4>АВАРИЙ</h4><br>
+            <a href="#"><h5>Посмотреть</h5></a>
+        </div>
+
+
+        <div id="verification">
+            <h1 align="left">1</h1>
+            <h4>Лифтов в простое</h4><br>
+
+            <a href="#"><h5>Посмотреть</h5></a>
+        </div>
+
+
+        <div id="dicpatching">
+            <h1 align="left">40</h1>
+            <h4>Требуется проведение периодического освидетельствования</h4>
+
+            <a href="#"><h5>Посмотреть</h5></a>
+        </div>
     </div>
 
 
-    <div id="verification">
-        <h1 align="left">3</h1>
-        <h4>Прибора УУТЭ</h4>
-        <H4>Требуется поверка</H4>
-        <a href="#"><h5>Посмотреть</h5></a>
+
+     <div class="water"><h2 align="left">ЭОМ</h2>
+        <div id="attention">
+            <h1 align="left">0</h1>
+            <h4>АВАРИЙ</h4><br>
+            <a href="#"><h5>Посмотреть</h5></a>
+        </div>
+
+
+        <div id="verification">
+            <h1 align="left">40</h1>
+            <h4>Поверка СИЗ</h4><br>
+
+            <a href="#"><h5>Посмотреть</h5></a>
+        </div>
+
+
+        <div id="dicpatching">
+            <h1 align="left">40 ВРУ</h1>
+            <h4>Требуется проведение проверки электролаборатории</h4>
+
+            <a href="#"><h5>Посмотреть</h5></a>
+        </div>
     </div>
 
-
-    <div id="dicpatching">
-        <h1 align="left">1</h1>
-        <h4>Низкая температура ГВС</h4><br>
-
-        <a href="#"><h5>Посмотреть</h5></a>
-    </div>
 
     <div class="info">
 
@@ -69,7 +121,9 @@
         <a href="{% url 'main' %}"><img class="iconbar" src="{% static 'images/Home.png' %}"> Главная</a><br>
         <a href="{% url 'equipments' %}"><img class="iconbar" src="{% static 'images/EQUIPMENT.png' %}">
             Оборудование</a><br>
-        <a href="{% url 'service_home_page' %}" class="dropdown"><img class="iconbar" src="{% static 'images/service.png' %}"> Сервис</a><br>
+        <a href="{% url 'service_home_page' %}" class="dropdown"><img class="iconbar"
+                                                                      src="{% static 'images/service.png' %}">
+            Сервис</a><br>
 
         <!-- <ul>
              <a href="#"><span>Техническое обслуживание</span></a><br>
@@ -77,11 +131,14 @@
              <a href="#"><span>Работы по наряду</span></a><br>
              <a href="#"><span>Подготовка систем к ОЗП</span></a>
          </ul> -->
-        <a href="{% url 'emergency' %}"><img class="iconbar" src="{% static 'images/attention.png' %}"> Проишествия</a><br>
+        <a href="{% url 'emergency' %}"><img class="iconbar" src="{% static 'images/attention.png' %}">
+            Проишествия</a><br>
         <!--<a href="#"><img class="iconbar" src="{% static 'images/systems.png' %}"> Инженерные системы</a><br>-->
-        <a href="{% url 'dispatching' %}"><img class="iconbar" src="{% static 'images/dispatching.png' %}"> Диспетчеризация</a><br>
+        <a href="{% url 'dispatching' %}"><img class="iconbar" src="{% static 'images/dispatching.png' %}">
+            Диспетчеризация</a><br>
         <a href="#"><img class="iconbar" src="{% static 'images/analitic.png' %}"> Аналитика</a><br>
-        <a href="{% url 'documentation' %}"><img class="iconbar" src="{% static 'images/documents.png' %}"> Рабочая документация</a><br>
+        <a href="{% url 'documentation' %}"><img class="iconbar" src="{% static 'images/documents.png' %}"> Рабочая
+            документация</a><br>
         <a href="#"><img class="iconbar" src="{% static 'images/forum.png' %}"> Блог</a><br>
         <a href="/admin"><img class="iconbar" src="{% static 'images/dispatching.png' %}"> Админ панель</a><br>
 
