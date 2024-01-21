@@ -1,9 +1,8 @@
 from django.urls import path
-from .import views
-from .views import ServiceHome
+from service import views
 
 urlpatterns = [
-    path('service_home_page/', ServiceHome.as_view(), name='service_home_page')
+    path('service_home_page/', views.ServiceHome, name='service_home_page')
 
 
 ]

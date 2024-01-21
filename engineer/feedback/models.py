@@ -4,7 +4,8 @@ from django.db import models
 # Create your models here.
 
 class Feedback(models.Model):
-    name = models.CharField('Имя', max_length=50)
+    name = models.CharField('ФИО', max_length=50)
+    job_title = models.CharField('Должность', max_length=50, null=True)
     text = models.TextField('Текст')
     time_create = models.DateTimeField("Дата создания", auto_now=True)
 

@@ -63,7 +63,7 @@ header {
 
 .addfeedback h5 {
     width:150px;
-    height:25px;
+    height:35px;
     color:white;
     background-color:#007bfb;
     font-family: 'CoFo Sans', sans-serif;
@@ -379,15 +379,14 @@ height: 24px;
 /*Страница "Обратная связь" */
 .imgfeedback{
     width:600px;
-    padding-left:300px;
+    margin-left:-120px;
 
 }
 
 
 .add{
-
     font-family: 'CoFo Sans', sans-serif;
-    font-size: 14px;
+    font-size: 19px;
     float:left;
     height:800px;
     align:center;
@@ -459,5 +458,18 @@ height: 24px;
     text-align: center;
     margin-left:40px;
 
+}
+.btnaddemergency2{
+    background-color:white;
+    color: #007bfb;
+    border: 1px solid #007bfb ;
+    border-radius:4px;
+    font-family: 'CoFo Sans', sans-serif;
+    font-size: 18.8px;
+    width:180px;
+    height:80px;
+    text-align: center;
+    margin-left:10px;
+    text-decoration: none;
 
 }

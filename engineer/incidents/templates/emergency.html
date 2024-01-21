@@ -17,15 +17,11 @@
         Тип проишествия: {{ e.types_incidents }}<br>
         Анализ прошествия: {{ e.title }}<br>
         Статус: {{ e.status_condition }}<br><br>
-         <a href="{% url 'add_emergency' %}"
-            class="btnaddequipment">Добавить проишествие</a>
         <a href="#" class="btnaddequipment">Удалить</a>
          <a href="#" class="btnaddequipment">Редактировать</a>
-
-
-
     </div>
-    <a href="{% url 'add_emergency' %}" class="btnaddequipment">Добавить проишествие</a>
+
+    <a href="{% url 'add_emergency' %}"class="btnaddemergency2">Добавить проишествие</a>
 </div>
 {% endfor %}
 {% endblock %}

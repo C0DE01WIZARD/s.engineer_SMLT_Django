@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'dispatching',
     'documentation',
     'service',
-    'django.contrib.postgres'  # это модуль Django, который предоставляет интеграцию с базой данных PostgreSQL
+    'blog'
 
 ]
 
