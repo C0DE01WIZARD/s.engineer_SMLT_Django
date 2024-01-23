@@ -34,7 +34,8 @@ class Service_company(models.Model):
     company_director = models.CharField('ФИО директора компании', max_length=100)
     quality_of_service = models.ForeignKey(Quality_of_service, on_delete=models.CASCADE,
                                            verbose_name='Качество обслуживания от 1 до 5')
-    #phone = models.CharField("Номер телефона аварийной бригады", max_length=12)
+
+    # phone = models.CharField("Номер телефона аварийной бригады", max_length=12)
 
     def __str__(self):
         return self.names_company
@@ -80,4 +81,13 @@ class Equipment(models.Model):
         verbose_name_plural = 'Оборудования'
 
 
+class Tasks(models.Model):
+    tasks = models.CharField("Задача", max_length=255)
+    datetime = models.DateTimeField("Выполнить до")
 
+    def __str__(self):
+        return self.tasks
+
+    class Meta:
+        verbose_name = 'Задача'
+        verbose_name_plural = 'Задачи'

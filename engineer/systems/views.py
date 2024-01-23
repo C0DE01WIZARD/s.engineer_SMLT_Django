@@ -2,7 +2,7 @@ from django.http import HttpResponseNotFound
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
 
-from .forms import FormAdd
+from .forms import FormAdd, FormAddTasks
 from .models import *
 
 
@@ -24,7 +24,8 @@ class List_Equimpents(ListView):
 
 
 def main(request):
-    data = {'title': 'Главная страница'}
+    tasks = Tasks.objects.all()
+    data = {'title': 'Главная страница', 'tasks': tasks}
     return render(request, "main.html", data)
 
 
@@ -48,3 +49,19 @@ def add(request):
     else:
         form = FormAdd()
     return render(request, 'add.html', {'form': form})
+
+
+def Add_tasks(request):
+    "Функция добавления оборудования"
+    if request.method == 'POST':
+        form = FormAddTasks(request.POST)
+        if form.is_valid():
+            try:
+                form.save()
+                print(form.cleaned_data, 'Данные переданы через POST запрос!!!')
+                return redirect('main')
+            except:
+                form.add_error(None, 'Ошибка добавления задачи')
+    else:
+        form_tasks = FormAddTasks()
+    return render(request, 'add_tasks.html', {'form': form_tasks})

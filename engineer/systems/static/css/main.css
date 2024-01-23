@@ -1,38 +1,67 @@
+{% load static %}
 html {
 height: 100%;
 width: 100%;
-
 }
 
 header {
-    border:0px solid black;
-    width: 99%; /*на весь экран*/
+    border-bottom:1px solid #596161;
+    background-color:white;
+    width: 1059px; /*на весь экран*/
+    height:56px;
     min-height: 16px; /*50 пикселей */
     margin-top: 0px;
+    margin-left:211px;
     top: 0;
     position: fixed;
 }
 
-.headera{
-    width:160px;
-    height:25px;
-    margin-left:1080px;
-    border-radius:5px;
+.auth{
+    width:35px;
+    height:35px;
+    margin-left:970px;
+    margin-top:-47px;
     padding: 2px 2px;
     font-family: 'CoFo Sans', sans-serif;
     font-size:14px;
-    background-color:#007bfb;
+    background-image: url('img.jpg');
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:red;
     color: white;
     border: none;
-    border-radius:8px;
+    border-radius:42px;
     text-decoration: none;
+}
+.imgmessageicon{
+    width:35px;
+    height:35px;
+    margin-left:907px;
+    margin-top:-75px;
+}
+
+.task{
+    font-family: 'CoFo Sans', sans-serif;
+    color:#596161;
+    font-size:16px;
+    width:35px;
+    height:35px;
+    margin-left:800px;
+    margin-top:-68px;
+
+
 }
 
 .dec{
-
+    background-color:red;
+    width:35px;
+    height:35px;
     text-decoration: none;
     color: black;
     margin-top: 100px;
+    border:none;
+
 
 }
 
@@ -53,6 +82,7 @@ header {
 .water{
     font-family: 'CoFo Sans', sans-serif;
     margin-left:485px;
+
 }
 
 
@@ -83,22 +113,29 @@ header {
      font-size:18px;
 }
 
-#line{ /* ЛИНИЯ ПОСЛЕ Header*/
-    height:11px;
-    width:100%;
-    border-bottom: 1px solid #e6f1fc;
-    padding-left:10px;
-    position: fixed;
 
-}
 
 #line2 {
-    height:440px;
-    width:75%;
+    background-color:#596161;
+    height:42px;
+    width:1px;
     border-bottom: 1px solid gray;
-    padding-left:10px
-
+    margin-left:885px;
+    margin-top:10px;
 }
+
+#line3 {
+    background-color:#596161;
+    height:42px;
+    width:1px;
+    border-bottom: 1px solid gray;
+    margin-left:960px;
+    margin-top:-42px;
+}
+
+
+
+
 
 #attention{
     font-family: 'CoFo Sans', sans-serif;
@@ -182,7 +219,7 @@ header {
 /*SIDENAV*/
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 250px; /* Set the width of the sidebar */
+    width: 220px; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
@@ -198,7 +235,7 @@ header {
    font-family: 'CoFo Sans', sans-serif;
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 13px;
     color: #596161;
     display: block;
 }
@@ -228,6 +265,7 @@ header {
 .samolet {
 width: 80%;
 text-decoration: none;
+align: center;
 
 }
 
@@ -286,6 +324,7 @@ height: 24px;
 
 
 .systems{
+    font-size:15px;
 
     background-color:#007bfb;
     color: white;
@@ -298,6 +337,17 @@ height: 24px;
     font-family: 'CoFo Sans', sans-serif;
     position: relative;
     padding: 1px px;
+}
+
+.systems:hover{
+    font-size:17px;
+    color:#fff!important;
+    text-shadow: 1px 1px 1px #000;
+
+    background-image: url('itp.jpg');
+    color: white;
+    text-stroke: 1px #FFFFFF;
+    transition: all 900ms ease;
 }
 
 .btnaddequipment{
@@ -382,7 +432,8 @@ height: 24px;
 /*Страница "Обратная связь" */
 .imgfeedback{
     width:600px;
-    margin-left:-120px;
+    height:300px;
+    margin-left:-170px;
 
 }
 
@@ -399,6 +450,15 @@ height: 24px;
     height:380px;
 }
 
+.btnaddfeedback{
+    width:120px;
+    height:25px;
+    background-color:#007bfb;
+    color:white;
+    border: 0px solid black;
+    border-radius:5px;
+
+}
 
 
 .form-label{
@@ -472,7 +532,120 @@ height: 24px;
     width:180px;
     height:80px;
     text-align: center;
-    margin-left:10px;
+    margin-left:261px;
     text-decoration: none;
+    transition: all 600ms ease;
+}
+
+.btnaddemergency2:hover{
+    background-color:007bfb;
+    color: white;
+    border: 1px solid #007bfb ;
+    border-radius:4px;
+    font-family: 'CoFo Sans', sans-serif;
+    font-size: 19.8px;
+    width:180px;
+    height:80px;
+    text-align: center;
+    margin-left:261px;
+    text-decoration: none;
+}
+
+/*Страница "Сервис" */
+.service{
+    background-color:#007bfb;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius:15px;
+    height: 120px;
+    width: 1000px;
+    margin-left:6px;
+    font-family: 'CoFo Sans', sans-serif;
+    font-size: 14px;
+    position: relative;
+    padding: 1px px;
+}
+
+.service_home{
+    font-family: 'CoFo Sans', sans-serif;
+    font-size: 17px;
+    height:97px;
+    width:1008px;
+    margin-left:253px;
+}
+
+/*Страница "Документация" */
+
+
+
+/*/*
+ /* Dropdown Button */
+.dropbtn {
+    width:120px;
+    height:30px;
+    font-family: 'CoFo Sans', sans-serif;
+    background-color: #007bfb;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-left: -189px;
+    margin-top: -77px;
 
 }
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    transition: all 600ms ease;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    font-family: 'CoFo Sans', sans-serif;
+    font-size: 14px;
+    background-color:#007bfb ;
+    color: white;
+    display: none;
+    border-radius:15px;
+    position: absolute;
+    padding: 4px 4px;
+    margin-left: -189px;
+    margin-top: -45px;
+
+
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    font-family: 'CoFo Sans', sans-serif;
+    font-size: 14px;
+    color:#007bfb ;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color:red;
+    color:white;
+    font-family: 'CoFo Sans', sans-serif;
+    font-size: 19px;
+    color:#007bfb ;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+}
+
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd; }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: white; color:#007bfb; }

@@ -11,12 +11,27 @@
     <script src="{% static 'js/main.js' %}"></script>
 
     <header>
-        <a href="/login" class="dec"><h5 align="center" class="headera">Вход в систему</h5></a>
+        <div id="line2"></div>
+        <div id="line3"></div>
+
+        <a href="/login" class="dec"><h5 class="auth"></h5></a>
+        <a href="#"><img class="imgmessageicon" src="{% static 'images/message.png' %}"></a>
+
+        <div class="dropdown">
+
+            <a href="{% url 'add_tasks' %}"><button class="dropbtn"> Задачи</button></a>
+            <div class="dropdown-content">
+                 <img class="iconbar" src="{% static 'images/icon.png' %}"><br>
+                {% for t in tasks %}
+                {{t.tasks}}<br>Сроки:{{t.datetime|date:"d.m.Y H:i" }}<br>
+                    <input type="checkbox"><label>Выполнено:</label><br><hr>
+                {% endfor %}
+            </div>
+        </div>
     </header>
     <br><br>
 
 
-    <div id="line"></div>
     {% block main %}
 
     <div class="water"><h2>ИТП, ВК, ОВ</h2>
@@ -68,8 +83,7 @@
     </div>
 
 
-
-     <div class="water"><h2 align="left">ЭОМ</h2>
+    <div class="water"><h2 align="left">ЭОМ</h2>
         <div id="attention">
             <h1 align="left">0</h1>
             <h4>АВАРИЙ</h4><br>
@@ -117,7 +131,7 @@
 
     <!-- Side navigation -->
     <div class="sidenav">
-        <a href="{% url 'main' %}"><img src="{% static 'images/samicon.png' %} " class="samolet" align="center"></a>
+        <img src="{% static 'images/samicon.png' %} " class="samolet" align="center">
         <a href="{% url 'main' %}"><img class="iconbar" src="{% static 'images/Home.png' %}"> Главная</a><br>
         <a href="{% url 'equipments' %}"><img class="iconbar" src="{% static 'images/EQUIPMENT.png' %}">
             Оборудование</a><br>

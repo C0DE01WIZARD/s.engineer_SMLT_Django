@@ -13,8 +13,8 @@ urlpatterns = [
     path('', include('dispatching.urls')),
     path('', include('incidents.urls')),
     path('', include('documentation.urls')),
-    path('', include('service.urls')),
-    # path('', include('emergency.urls'))
+    path('', include('service_app.urls')),
+    path('', include('feedback_1.urls'))
 
 ]
 
