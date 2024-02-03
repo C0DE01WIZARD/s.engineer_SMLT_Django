@@ -1,9 +1,16 @@
 from django.http import HttpResponseNotFound
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
-
+from rest_framework import generics
 from .forms import FormAdd, FormAddTasks
 from .models import *
+from .serializers import *
+
+
+class EquipmentsAPIView(generics.ListAPIView):
+    """Класс для вывода спсика оборудования"""
+    queryset = Equipment.objects.all()
+    serializer_class = EquipmentSerializer
 
 
 def page_not_found(request, exception):
@@ -17,10 +24,10 @@ class AddEquipments(ListView):
     context_object_name = 'add_equipments'
 
 
-class List_Equimpents(ListView):
-    model = Equipment
-    template_name = "list_equipments.html"
-    context_object_name = 'list'
+def List_Equimpents(request):
+    model = Equipment.objects.all()
+    l = {'list': model}
+    return render(request, "list_equipments.html", l)
 
 
 def main(request):

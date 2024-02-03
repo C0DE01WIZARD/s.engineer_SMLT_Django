@@ -1,13 +1,18 @@
 {% load static %}
-html {
+
+html, body {
 height: 100%;
-width: 100%;
+margin: 0;
+padding: 0;
 }
 
+
+
 header {
+    float:right;
     border-bottom:1px solid #596161;
     background-color:white;
-    width: 1059px; /*на весь экран*/
+    width: 99%; /*на весь экран*/
     height:56px;
     min-height: 16px; /*50 пикселей */
     margin-top: 0px;
@@ -15,6 +20,17 @@ header {
     top: 0;
     position: fixed;
 }
+
+.users{
+    background-color:;
+    width:1220px;
+    height:52px;
+    margin-left:19%;
+    float:right;
+
+
+}
+
 
 .auth{
     width:35px;
@@ -28,17 +44,18 @@ header {
 
     background-repeat: no-repeat;
     background-size: cover;
-    background-color:red;
+
     color: white;
     border: none;
     border-radius:42px;
     text-decoration: none;
+    background-color:red;
 }
 .imgmessageicon{
     width:35px;
     height:35px;
     margin-left:907px;
-    margin-top:-75px;
+    margin-top:-57px;
 }
 
 .task{
@@ -53,17 +70,7 @@ header {
 
 }
 
-.dec{
-    background-color:red;
-    width:35px;
-    height:35px;
-    text-decoration: none;
-    color: black;
-    margin-top: 100px;
-    border:none;
 
-
-}
 
 .searchservice{
     border-radius:5px;
@@ -77,6 +84,13 @@ header {
     border-radius:5px;
     font-family: 'CoFo Sans', sans-serif;
     font-size:14px;
+}
+.home{
+   min-height:100%;
+   float:right;
+   margin-right:300px;
+
+
 }
 
 .water{
@@ -317,30 +331,28 @@ height: 24px;
     height:241px;
     width:1008px;
     margin-left:253px;
+    margin-top: 39px;
+    display: inline;
 
 }
-
-
-
 
 .systems{
     font-size:15px;
-
     background-color:#007bfb;
     color: white;
     text-align: center;
-    border: none;
-    border-radius:15px;
-    height: 260px;
-    width: 350px;
-    margin-left:6px;
+    border-radius:34px;
+    height: 25%;
+    width: 85%;
+    margin-left:231px;
     font-family: 'CoFo Sans', sans-serif;
-    position: relative;
-    padding: 1px px;
+
+
+
 }
 
 .systems:hover{
-    font-size:17px;
+    font-size:16px;
     color:#fff!important;
     text-shadow: 1px 1px 1px #000;
 
@@ -399,8 +411,8 @@ height: 24px;
     margin-top:10px;
     margin-left:256px;
     padding: 4px 3px;
-    width:449px;
-    height:140px;
+    width:997px;
+    height:82px;
     box-shadow: 3px 3px 3px gray;
 }
 
@@ -472,10 +484,9 @@ height: 24px;
 
 .dispatchinghome{
     font-family: 'CoFo Sans', sans-serif;
-
     color:white;
     background-color:#007bfb;
-    width: 80%;
+    width: 84%;
     height: 80%;
     margin-left:249px;
 
@@ -494,6 +505,15 @@ height: 24px;
 
 
 /*Страница "Проишествия" */
+.emegencyhome{
+    font-family: 'CoFo Sans', sans-serif;
+    font-size: 17px;
+    height:241px;
+    width:1008px;
+    margin-left:253px;
+    margin-top: 39px;
+}
+
 .emergency{
     background-color:#007bfb;
     color: white;
@@ -589,7 +609,7 @@ height: 24px;
     color: white;
     font-size: 16px;
     border-radius: 8px;
-    margin-left: -189px;
+    margin-left: 748px;
     margin-top: -77px;
 
 }
@@ -603,6 +623,7 @@ height: 24px;
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
+    width:300px;
     font-family: 'CoFo Sans', sans-serif;
     font-size: 14px;
     background-color:#007bfb ;
@@ -611,7 +632,7 @@ height: 24px;
     border-radius:15px;
     position: absolute;
     padding: 4px 4px;
-    margin-left: -189px;
+    margin-left: 704px;
     margin-top: -45px;
 
 

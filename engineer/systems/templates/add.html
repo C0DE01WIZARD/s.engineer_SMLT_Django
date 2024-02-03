@@ -1,7 +1,7 @@
 {% extends 'main.html' %}
 {% load static %}
 {% block main %}
-<title>{{title}}</title>
+<title>{{ main_title|default:"Без заголовка" }}</title>
 <h1 class="titletext" align="center">Добавить оборудование</h1>
 <div class="add">
 

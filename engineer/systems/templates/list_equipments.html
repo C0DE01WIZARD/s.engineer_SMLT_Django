@@ -3,12 +3,12 @@
 {% block main %}
 <title>{{title}}</title>
 <h1 class="titletext" align="center">Список оборудования ИТП</h1>
+
 {% for l in list %}
 <div class="addequipments">
-    <h3><strong>Адрес: {{ l.address }}</strong><br></h3>
-    Номер ИТП: {{ l.number }}<br>
-    Наименование оборудования:{{ l.equipment }}<br>
-    Система: {{ l.system }}<br>
+     <h5><strong>{{ l.address }}</strong></h5>
+    <h5>Наименование оборудования:{{ l.equipment|upper }}</h5>
+
 </div>
 {% endfor %}<br>
 <a href="{% url 'add_equipments' %}" class="btnaddequipments">Добавить оборудование</a><br>

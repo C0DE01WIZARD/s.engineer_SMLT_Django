@@ -11,121 +11,127 @@
     <script src="{% static 'js/main.js' %}"></script>
 
     <header>
-        <div id="line2"></div>
-        <div id="line3"></div>
+        <div class="users">
+            <div id="line2"></div>
+            <div id="line3"></div>
 
-        <a href="/login" class="dec"><h5 class="auth"></h5></a>
-        <a href="#"><img class="imgmessageicon" src="{% static 'images/message.png' %}"></a>
+            <a href="/login"><h5 class="auth"></h5></a>
+            <a href="#"><img class="imgmessageicon" src="{% static 'images/message.png' %}" title="Оповещения"></a>
 
-        <div class="dropdown">
+            <div class="dropdown">
 
-            <a href="{% url 'add_tasks' %}"><button class="dropbtn"> Задачи</button></a>
-            <div class="dropdown-content">
-                 <img class="iconbar" src="{% static 'images/icon.png' %}"><br>
-                {% for t in tasks %}
-                {{t.tasks}}<br>Сроки:{{t.datetime|date:"d.m.Y H:i" }}<br>
-                    <input type="checkbox"><label>Выполнено:</label><br><hr>
-                {% endfor %}
+                <a href="{% url 'add_tasks' %}">
+                    <button class="dropbtn"> Задачи</button>
+                </a>
+                <div class="dropdown-content">
+                    <img class="iconbar" src="{% static 'images/icon.png' %}"><br>
+                    {% for t in tasks %}
+                    {{t.tasks}}<br>Сроки:{{t.datetime|date:"d.m.Y H:i" }}<br>
+                    <input type="checkbox"><label>Выполнено:</label><br>
+                    <hr>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </header>
-    <br><br>
+    <br><br><br>
 
 
     {% block main %}
+    <div class="home">
+        <div class="water"><h2>ИТП, ВК, ОВ</h2>
+            <div id="attention">
+                <h1 align="left">0</h1>
+                <h4>АВАРИЙ</h4><br>
+                <a href="#"><h5>Посмотреть</h5></a>
+            </div>
 
-    <div class="water"><h2>ИТП, ВК, ОВ</h2>
-        <div id="attention">
-            <h1 align="left">0</h1>
-            <h4>АВАРИЙ</h4><br>
-            <a href="#"><h5>Посмотреть</h5></a>
+
+            <div id="verification">
+                <h1 align="left">3</h1>
+                <h4>Прибора УУТЭ</h4>
+                <H4>Требуется поверка</H4>
+                <a href="#"><h5>Посмотреть</h5></a>
+            </div>
+
+
+            <div id="dicpatching">
+                <h1 align="left">1</h1>
+                <h4>Низкая температура ГВС</h4><br>
+
+                <a href="#"><h5>Посмотреть</h5></a>
+            </div>
+        </div>
+
+        <div class="water"><h2 align="left">Лифты</h2>
+            <div id="attention">
+                <h1 align="left">0</h1>
+                <h4>АВАРИЙ</h4><br>
+                <a href="#"><h5>Посмотреть</h5></a>
+            </div>
+
+
+            <div id="verification">
+                <h1 align="left">1</h1>
+                <h4>Лифтов в простое</h4><br>
+
+                <a href="#"><h5>Посмотреть</h5></a>
+            </div>
+
+
+            <div id="dicpatching">
+                <h1 align="left">40</h1>
+                <h4>Требуется проведение периодического освидетельствования</h4>
+
+                <a href="#"><h5>Посмотреть</h5></a>
+            </div>
         </div>
 
 
-        <div id="verification">
-            <h1 align="left">3</h1>
-            <h4>Прибора УУТЭ</h4>
-            <H4>Требуется поверка</H4>
-            <a href="#"><h5>Посмотреть</h5></a>
+        <div class="water"><h2 align="left">ЭОМ</h2>
+            <div id="attention">
+                <h1 align="left">0</h1>
+                <h4>АВАРИЙ</h4><br>
+                <a href="#"><h5>Посмотреть</h5></a>
+            </div>
+
+
+            <div id="verification">
+                <h1 align="left">40</h1>
+                <h4>Поверка СИЗ</h4><br>
+
+                <a href="#"><h5>Посмотреть</h5></a>
+            </div>
+
+
+            <div id="dicpatching">
+                <h1 align="left">40 ВРУ</h1>
+                <h4>Требуется проведение проверки электролаборатории</h4>
+
+                <a href="#"><h5>Посмотреть</h5></a>
+            </div>
         </div>
 
 
-        <div id="dicpatching">
-            <h1 align="left">1</h1>
-            <h4>Низкая температура ГВС</h4><br>
+        <div class="info">
 
-            <a href="#"><h5>Посмотреть</h5></a>
+            <h3 align="center">Информация о системе s.engineer</h3>
+            <img class="newsphoto" src="{% static 'images/info.jpg' %}">
+
+            <h4>Веб-сервис s.engineer, предназначен для контроля работы инженерных систем и выполнениия
+                ремонтных работ на объекте. Данное приложение включает огромный набор инструментов для работы:<br>
+                <img class="iconbar" src="{% static 'images/EQUIPMENT.png' %}"> Добавление оборудования<br>
+                <img class="iconbar" src="{% static 'images/attention.png' %}"> Контроль и фиксация аварий<br>
+                <img class="iconbar" src="{% static 'images/analitic.png' %}"> Аналитика полученных данных<br>
+                <img class="iconbar" src="{% static 'images/documents.png' %}"> Удобный просмотр рабочей
+                документации<br>
+                <img class="iconbar" src="{% static 'images/forum.png' %}"> Форум для обсуждения<br>
+                <img class="iconbar" src="{% static 'images/dispatching.png' %}"> Получение и вывод параметров работы
+                инженерного оборудования (при наличии диспетчеризации)<br></h4>
+            <a href="{% url 'feedback' %}" class="addfeedback"><h5 align="center">Инструкция по работе с сервисом</h5>
+            </a>
+            <a href="{% url 'feedback' %}" class="addfeedback"><h5 align="center">Добавить обратную связь</h5></a>
         </div>
-    </div>
-
-    <div class="water"><h2 align="left">Лифты</h2>
-        <div id="attention">
-            <h1 align="left">0</h1>
-            <h4>АВАРИЙ</h4><br>
-            <a href="#"><h5>Посмотреть</h5></a>
-        </div>
-
-
-        <div id="verification">
-            <h1 align="left">1</h1>
-            <h4>Лифтов в простое</h4><br>
-
-            <a href="#"><h5>Посмотреть</h5></a>
-        </div>
-
-
-        <div id="dicpatching">
-            <h1 align="left">40</h1>
-            <h4>Требуется проведение периодического освидетельствования</h4>
-
-            <a href="#"><h5>Посмотреть</h5></a>
-        </div>
-    </div>
-
-
-    <div class="water"><h2 align="left">ЭОМ</h2>
-        <div id="attention">
-            <h1 align="left">0</h1>
-            <h4>АВАРИЙ</h4><br>
-            <a href="#"><h5>Посмотреть</h5></a>
-        </div>
-
-
-        <div id="verification">
-            <h1 align="left">40</h1>
-            <h4>Поверка СИЗ</h4><br>
-
-            <a href="#"><h5>Посмотреть</h5></a>
-        </div>
-
-
-        <div id="dicpatching">
-            <h1 align="left">40 ВРУ</h1>
-            <h4>Требуется проведение проверки электролаборатории</h4>
-
-            <a href="#"><h5>Посмотреть</h5></a>
-        </div>
-    </div>
-
-
-    <div class="info">
-
-        <h3 align="center">Информация о системе s.engineer</h3>
-        <img class="newsphoto" src="{% static 'images/itp.jpg' %}">
-
-        <h4>Веб-сервис s.engineer, предназначен для контроля работы инженерных систем и выполнениия
-            ремонтных работ на объекте. Данное приложение включает огромный набор инструментов для работы:<br>
-            <img class="iconbar" src="{% static 'images/EQUIPMENT.png' %}"> Добавление оборудования<br>
-            <img class="iconbar" src="{% static 'images/attention.png' %}"> Контроль и фиксация аварий<br>
-            <img class="iconbar" src="{% static 'images/analitic.png' %}"> Аналитика полученных данных<br>
-            <img class="iconbar" src="{% static 'images/documents.png' %}"> Удобный просмотр рабочей документации<br>
-            <img class="iconbar" src="{% static 'images/forum.png' %}"> Форум для обсуждения<br>
-            <img class="iconbar" src="{% static 'images/dispatching.png' %}"> Получение и вывод параметров работы
-            инженерного оборудования (при наличии диспетчеризации)<br></h4>
-
-        <a href="{% url 'feedback' %}" class="addfeedback"><h5 align="center">Добавить обратную связь</h5></a>
-
-
     </div>
     {% endblock %}
 
@@ -153,7 +159,11 @@
         <a href="#"><img class="iconbar" src="{% static 'images/analitic.png' %}"> Аналитика</a><br>
         <a href="{% url 'documentation' %}"><img class="iconbar" src="{% static 'images/documents.png' %}"> Рабочая
             документация</a><br>
-        <a href="#"><img class="iconbar" src="{% static 'images/forum.png' %}"> Блог</a><br>
+        <a href="{% url 'documentation' %}" align="center"><img class="iconbar" src="{% static 'images/documents.png' %}"> Электронная
+            шахматка МКД</a><br>
+        <a href="#"><img class="iconbar" src="{% static 'images/forum.png' %}"> Форум</a><br>
+        <a href="#"><img class="iconbar" src="{% static 'images/filosofy.png' %}" align="center"> Ценности и филосифия
+            инженера</a><br>
         <a href="/admin"><img class="iconbar" src="{% static 'images/dispatching.png' %}"> Админ панель</a><br>
 
     </div>
