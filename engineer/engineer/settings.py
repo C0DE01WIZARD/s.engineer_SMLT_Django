@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'service_app',
     'blog',
     'feedback_1',
-    'rest_framework'
+    'rest_framework',
+    'django_extensions'
 
 ]
 

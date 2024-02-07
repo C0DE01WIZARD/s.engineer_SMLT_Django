@@ -109,14 +109,15 @@ header {
 
 
 .addfeedback h5 {
-    width:150px;
-    height:35px;
+    width:349px;
+    height:39px;
     color:white;
     background-color:#007bfb;
     font-family: 'CoFo Sans', sans-serif;
+    font-size:16px;
     border-radius:5px;
     text-decoration: none;
-    margin-left:98px;
+    margin-left:19px;
     margin-top:29px;
 
 }
@@ -517,14 +518,14 @@ height: 24px;
 .emergency{
     background-color:#007bfb;
     color: white;
-    text-align: cente;
     border: none;
     border-radius:15px;
-    height: 222px;
-    width: 1000px;
+    max-height: 100%;
+    max-width: 100%;
     margin-left:6px;
     font-family: 'CoFo Sans', sans-serif;
     font-size:15px;
+    float:left;
     position: relative;
     padding: 4px 4px;
 }
@@ -578,8 +579,8 @@ height: 24px;
     text-align: center;
     border: none;
     border-radius:15px;
-    height: 120px;
-    width: 1000px;
+    max-height: 100%;
+    max-width: 163%;
     margin-left:6px;
     font-family: 'CoFo Sans', sans-serif;
     font-size: 14px;
@@ -662,6 +663,7 @@ height: 24px;
 
 
 
+
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #ddd; }
 
@@ -670,3 +672,14 @@ height: 24px;
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: white; color:#007bfb; }
+
+/*Страница "Инструкция по работе с сервисом s.engineer" */
+.manualhome{
+    font-family: 'CoFo Sans', sans-serif;
+    font-size: 19px;
+    margin-left:298px;
+    width:1200px;
+    height:1200px;
+
+
+}

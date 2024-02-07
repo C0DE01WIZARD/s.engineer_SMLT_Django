@@ -128,7 +128,7 @@
                 <img class="iconbar" src="{% static 'images/forum.png' %}"> Форум для обсуждения<br>
                 <img class="iconbar" src="{% static 'images/dispatching.png' %}"> Получение и вывод параметров работы
                 инженерного оборудования (при наличии диспетчеризации)<br></h4>
-            <a href="{% url 'feedback' %}" class="addfeedback"><h5 align="center">Инструкция по работе с сервисом</h5>
+            <a href="{% url 'manual' %}" class="addfeedback"><h5 align="center">Инструкция по работе с сервисом</h5>
             </a>
             <a href="{% url 'feedback' %}" class="addfeedback"><h5 align="center">Добавить обратную связь</h5></a>
         </div>
@@ -157,9 +157,10 @@
         <a href="{% url 'dispatching' %}"><img class="iconbar" src="{% static 'images/dispatching.png' %}">
             Диспетчеризация</a><br>
         <a href="#"><img class="iconbar" src="{% static 'images/analitic.png' %}"> Аналитика</a><br>
-        <a href="{% url 'documentation' %}"><img class="iconbar" src="{% static 'images/documents.png' %}"> Рабочая
-            документация</a><br>
-        <a href="{% url 'documentation' %}" align="center"><img class="iconbar" src="{% static 'images/documents.png' %}"> Электронная
+        <a href="{% url 'documentation' %}"><img class="iconbar" src="{% static 'images/documents.png' %}"> Техническая
+            литература</a><br>
+        <a href="{% url 'main' %}" align="center"><img class="iconbar" src="{% static 'images/documents.png' %}">
+            Электронная
             шахматка МКД</a><br>
         <a href="#"><img class="iconbar" src="{% static 'images/forum.png' %}"> Форум</a><br>
         <a href="#"><img class="iconbar" src="{% static 'images/filosofy.png' %}" align="center"> Ценности и филосифия

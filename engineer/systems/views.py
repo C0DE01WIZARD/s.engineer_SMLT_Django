@@ -1,16 +1,32 @@
+from django.forms import model_to_dict
 from django.http import HttpResponseNotFound
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
 from rest_framework import generics
+from rest_framework.response import Response
+from rest_framework.views import APIView
 from .forms import FormAdd, FormAddTasks
 from .models import *
 from .serializers import *
 
 
-class EquipmentsAPIView(generics.ListAPIView):
-    """Класс для вывода спсика оборудования"""
-    queryset = Equipment.objects.all()
-    serializer_class = EquipmentSerializer
+# class EquipmentsAPIView(generics.ListAPIView):
+#     """Класс для вывода спсика оборудования"""
+#     queryset = Equipment.objects.all()
+#     serializer_class = EquipmentSerializer
+
+class EquipmentsAPIView(APIView):
+    def get(self, requests):
+        tasks_list = Tasks.objects.all().values()
+        return Response({'posts': list(tasks_list)})
+
+    def post(self, requests):
+        tasks_new = Tasks.objects.create(
+            tasks=requests.data['tasks'],
+            datetime=requests.data['datetime'],
+        )
+        return Response({'post': model_to_dict(tasks_new)})
+
 
 
 def page_not_found(request, exception):

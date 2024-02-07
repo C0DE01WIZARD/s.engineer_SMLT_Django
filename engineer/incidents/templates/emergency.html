@@ -4,8 +4,10 @@
 <title>{{title}}</title>
 
 <h1 class="titletext" align="center">Проишествия на объекте</h1>
-
+<h4 class="btnaddemergency2">Количество проишествий на объекте: {{ emergency|length }}</h4>
+<a href="{% url 'add_emergency' %}"class="btnaddemergency2">Добавить проишествие</a>
 {% for e in emergency %}
+
 <div class="emegencyhome">
     <div class="emergency">
         <h3>Адрес: {{ e.address }}</h3>
@@ -24,5 +26,5 @@
 
 </div>
 {% endfor %}
-<a href="{% url 'add_emergency' %}"class="btnaddemergency2">Добавить проишествие</a>
+
 {% endblock %}
