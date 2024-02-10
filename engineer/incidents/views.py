@@ -1,3 +1,5 @@
+import json
+
 from django.shortcuts import render, redirect
 from .bot import send_message
 from .models import *
@@ -18,9 +20,10 @@ def Add(request):
         form = FormEmergency(request.POST)
         form.save()
 
-        message = ((str(form.cleaned_data).replace('date', "Дата", ).replace('times', "Время")
-                   .replace("{", '').replace("}", '', ).replace('Датаtime.Дата', ''))
-                   .replace('Датаtime.time', "")).replace('Датаtime.time', "")
+        # message = ((str(form.cleaned_data).replace('date', "Дата", ).replace('times', "Время")
+        #            .replace("{", '').replace("}", '', ).replace('Датаtime.Дата', ''))
+        #            .replace('Датаtime.time', "")).replace('Датаtime.time', "")
+        message = json.loads(form.cleaned_data)
         send_message(message)
         if form.is_valid():
             try:

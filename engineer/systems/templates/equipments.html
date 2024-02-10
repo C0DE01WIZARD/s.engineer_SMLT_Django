@@ -12,7 +12,7 @@
 <h4> Полное название: {{ sys.full_name}}</h4>
 <h4>Обслуживающая компания: {{ sys.service_company}}</h4>
 
-<a href="{% url 'list_equipments' %}" class="btnaddequipment">Список оборудования</a>
+<a href="{{ sys.pk  }}" class="btnaddequipment">Список оборудования</a>
 </div>
 </div>
 

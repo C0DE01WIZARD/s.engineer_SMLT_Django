@@ -2,7 +2,34 @@ from django.db import models
 
 
 # Create your models here.
+class Building_type(models.Model):
+    types = models.CharField('Тип зданий', max_length=55)
+
+    def __str__(self):
+        return f'{self.types}'
+
+    class Meta:
+        verbose_name = 'Тип'
+        verbose_name_plural = 'Тип'
+
+
+class Location(models.Model):
+    location = models.CharField('Жилой комплекс, Социальный объект, Коммерческое здание', max_length=55, blank=True,
+                                default='')
+    year_of_construction_start = models.IntegerField('Год начала строительства')
+    category = models.ForeignKey(Building_type, on_delete=models.CASCADE,
+                                 verbose_name='Класс зданий')
+
+    def __str__(self):
+        return f'{self.location}'
+
+    class Meta:
+        verbose_name = 'Объект'
+        verbose_name_plural = 'Объекты'
+
+
 class Address(models.Model):
+    location = models.ForeignKey(Location, verbose_name='Выберите локацию', on_delete=models.CASCADE, null=True)
     city = models.CharField('Город', max_length=50, blank=True, default='')
     settlement = models.CharField('Поселение', max_length=50, blank=True, default='')
     street = models.CharField('Улица', max_length=50, blank=True, default='')
@@ -70,6 +97,7 @@ class Equipment(models.Model):
     model = models.CharField('Модель оборудования', max_length=50)
     year = models.IntegerField('Год ввода в эксплуатацию')
     address = models.ForeignKey(Address, on_delete=models.PROTECT, verbose_name='Адрес', default='')
+
     number = models.CharField("Номер ИТП (если присвоено)", max_length=20, default='')
 
     def __str__(self):
