@@ -1,12 +1,28 @@
 # Определение версии Docker Compose и начало описания сервисо
 version: '3'
 
-services:
-   web-app:
-       # Сборка образа для сервиса django из текущей директории
-       build:
-         context: .
-       ports:
-           - '8000:8000'
-       volumes:
-        - ./engineer:/engineer
+services: # какие сервисы будут запускаться
+  engineer:
+    # Сборка образа для сервиса django из текущей директории
+    build:
+      context: .
+    ports: # какие порты должны быть проброшены
+      - '8000:8000' # порт 8000 в контейнере будет соответсвовать нашему порту в ОС
+    volumes: # подключенные дома
+      - ./:/engineer # подключение нашей локальной папки в Докер
+    environment:
+      - DB_HOST=database
+      - DB_NAME=dbname
+      - DB_PASS=pass
+    command: > # команда для запуска Django-сервера
+      sh -c 'python manage.py runserver 0.0.0.0:8000'
+    depends_on:
+      - psdb
+
+  psdb:
+    image: postgres
+    environment:
+      - POSTGRES_DB=s_engeener
+      - POSTGRES_USER=s_engeener
+      - POSTGRES_PASSWORD=s_engeener
+

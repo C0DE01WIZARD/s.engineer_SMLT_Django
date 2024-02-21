@@ -5,6 +5,8 @@ from django.views.generic import ListView
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.views import APIView
+
+
 from .forms import FormAdd, FormAddTasks
 from .models import *
 from .serializers import *

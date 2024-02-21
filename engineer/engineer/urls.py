@@ -14,7 +14,9 @@ urlpatterns = [
     path('', include('incidents.urls')),
     path('', include('documentation.urls')),
     path('', include('service_app.urls')),
-    path('', include('feedback_1.urls'))
+    path('', include('feedback_1.urls')),
+    path('api/', include('redis_app.urls')),
+    path("__debug__/", include("debug_toolbar.urls")),
 
 ]
 

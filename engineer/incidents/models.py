@@ -40,13 +40,13 @@ class Danger_level(models.Model):
 class Incidents(models.Model):
     date = models.DateField('Дата проишествия')
     times = models.TimeField('Время проишествия', default='09:00')
-    address = models.ForeignKey(Address, verbose_name='Выберите адрес', on_delete=models.DO_NOTHING)
-    equipment = models.ForeignKey(Equipment, verbose_name='Выберите оборудование', on_delete=models.DO_NOTHING)
-    danger_level = models.ForeignKey(Danger_level, verbose_name='Критичность', on_delete=models.DO_NOTHING, default='')
-    types_incidents = models.ForeignKey(Types_incidents, verbose_name='Тип проишествия', on_delete=models.DO_NOTHING)
+    address = models.ForeignKey(Address, verbose_name='Выберите адрес', on_delete=models.PROTECT, null=True)
+    equipment = models.ForeignKey(Equipment, verbose_name='Выберите оборудование', on_delete=models.CASCADE, null=True)
+    danger_level = models.ForeignKey(Danger_level, verbose_name='Критичность', on_delete=models.CASCADE, default='')
+    types_incidents = models.ForeignKey(Types_incidents, verbose_name='Тип проишествия', on_delete=models.CASCADE)
     title = models.TextField('Описание проишествия', max_length=1000)
     incident_analysis = models.TextField('Анализ проишествия', max_length=100)
-    status_condition = models.ForeignKey(Status, verbose_name='Выберите статус', on_delete=models.DO_NOTHING)
+    status_condition = models.ForeignKey(Status, verbose_name='Выберите статус', on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.date}/{self.address}/{self.types_incidents}/{self.title}'
