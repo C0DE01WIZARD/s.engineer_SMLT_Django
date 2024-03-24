@@ -1,0 +1,23 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}Управление{% endblock %}
+
+{% block branding %}
+
+<img class="iconbar" src="{% static 'images/icon.png' %}" >
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/icon.png' %}">
+<div id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a></div>
+<link rel="stylesheet" href="{% static 'css/admin.css' %}">
+
+{% if user.is_anonymous %}
+  {% include "admin/color_theme_toggle.html" %}
+{% endif %}
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block extrastyle %}
+
+
+{% endblock %}

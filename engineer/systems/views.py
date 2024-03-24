@@ -20,7 +20,7 @@ from .serializers import *
 class EquipmentsAPIView(APIView):
     def get(self, requests):
         tasks_list = Tasks.objects.all().values()
-        return Response({'posts': list(tasks_list)})
+        return Response({'ЗАДАЧИ': list(tasks_list)})
 
     def post(self, requests):
         tasks_new = Tasks.objects.create(
@@ -61,10 +61,10 @@ class Equipments(ListView):
 
 
 def add(request):
-    "Функция добавления оборудования"
+    """Функция добавления оборудования"""
     if request.method == 'POST':
-        form = FormAdd(request.POST)
-        if form.is_valid():
+        form = FormAdd(request.POST) # создаем экземпляр нашей формы и передаём POST
+        if form.is_valid(): # проверка валидности формы
             try:
                 form.save()
                 print(form.cleaned_data, 'Данные переданы через POST запрос!!!')

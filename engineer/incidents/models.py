@@ -2,6 +2,7 @@ from django.db import models
 from systems.models import *
 
 
+
 # Create your models here.
 class Status(models.Model):
     """Класс для создания статусов проишествия"""
@@ -39,10 +40,10 @@ class Danger_level(models.Model):
 
 class Incidents(models.Model):
     date = models.DateField('Дата проишествия')
-    times = models.TimeField('Время проишествия', default='09:00')
-    address = models.ForeignKey(Address, verbose_name='Выберите адрес', on_delete=models.PROTECT, null=True)
-    equipment = models.ForeignKey(Equipment, verbose_name='Выберите оборудование', on_delete=models.CASCADE, null=True)
-    danger_level = models.ForeignKey(Danger_level, verbose_name='Критичность', on_delete=models.CASCADE, default='')
+    times = models.TimeField('Время проишествия')
+    address = models.ForeignKey(Address, verbose_name='Выберите адрес', on_delete=models.CASCADE)
+    equipment = models.ForeignKey(Equipment, verbose_name='Выберите оборудование', on_delete=models.CASCADE)
+    danger_level = models.ForeignKey(Danger_level, verbose_name='Критичность', on_delete=models.CASCADE)
     types_incidents = models.ForeignKey(Types_incidents, verbose_name='Тип проишествия', on_delete=models.CASCADE)
     title = models.TextField('Описание проишествия', max_length=1000)
     incident_analysis = models.TextField('Анализ проишествия', max_length=100)

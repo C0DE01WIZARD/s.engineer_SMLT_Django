@@ -1,6 +1,7 @@
 from django.apps import AppConfig
 
 
-class Feedback1Config(AppConfig):
+class Blog2Config(AppConfig):
+    verbose_name = 'Форум'
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'feedback_1'
+    name = 'blog_app'

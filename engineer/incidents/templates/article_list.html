@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block main %}
+<h1 class="titletext" align="center">Список статей</h1>
+{% for art in article %}
+<div class="article_list">
+    <p align="center">{{ art.name }}</p>
+    <img src={{ art.image.url }}>
+    <h6 align="center">{{ art.text }}</h6>
+    {% endfor %}
+</div>
+
+{% endblock %}

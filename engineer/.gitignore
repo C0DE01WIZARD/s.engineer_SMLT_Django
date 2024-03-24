@@ -1,3 +1,5 @@
-../.idea
-tips.txt
+s.engineer_env/
+**/__pycache__/
+*.pyc/
+venv/
 secret_settings.py

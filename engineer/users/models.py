@@ -6,3 +6,6 @@ class Employees(models.Model):
     job_title = models.CharField('Должность', max_length=50)
     in_company = models.DateTimeField('Дата приема на работу')
 
+    class Meta:
+        verbose_name = 'Пользователь сервиса'
+        verbose_name_plural = 'Пользователи сервиса'

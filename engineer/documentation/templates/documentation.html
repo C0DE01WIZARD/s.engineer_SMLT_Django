@@ -4,11 +4,14 @@
 <title>{{title}}</title>
 <h1 class="titletext" align="center">Добавить статью</h1>
 <div class="add">
-  <h1 class="titletext" align="center">Добавьте вашу статью для дальнейшего пользования</h1>
+  <h1 class="titletext" align="center">Добавьте вашу статью для совместного пользования</h1>
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="btnfeedback">Загрузить</button>
   </form>
+
+
 </div><br>
+
 {% endblock %}

@@ -25,7 +25,7 @@ def Add(request):
                     .replace("{", '').replace("}", '', ).replace('Датаtime.Дата', ''))
                    .replace('Датаtime.time', "")).replace('Датаtime.time', "")
 
-        send_message(message + logging)
+        send_message(message)
         if form.is_valid():
             try:
                 form.save()

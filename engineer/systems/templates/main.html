@@ -141,9 +141,12 @@
         <a href="{% url 'main' %}"><img class="iconbar" src="{% static 'images/Home.png' %}"> Главная</a><br>
         <a href="{% url 'equipments' %}"><img class="iconbar" src="{% static 'images/EQUIPMENT.png' %}">
             Оборудование</a><br>
+        <a href="#"><img class="iconbar" src="{% static 'images/sale.png' %}">
+            Закупки</a><br>
         <a href="{% url 'service_home_page' %}" class="dropdown"><img class="iconbar"
                                                                       src="{% static 'images/service.png' %}">
             Сервис</a><br>
+        <a href="{% url 'service_company' %}"><img class="iconbar" src="{% static 'images/KA.png' %}"> Сервисные КА</a><br>
 
         <!-- <ul>
              <a href="#"><span>Техническое обслуживание</span></a><br>
@@ -151,21 +154,19 @@
              <a href="#"><span>Работы по наряду</span></a><br>
              <a href="#"><span>Подготовка систем к ОЗП</span></a>
          </ul> -->
-        <a href="{% url 'emergency' %}"><img class="iconbar" src="{% static 'images/attention.png' %}">
+        <a href="#"><img class="iconbar" src="{% static 'images/attention.png' %}">
+            Неисправности </a><br>
+        <a href="{% url 'emergency' %}"><img class="iconbar" src="{% static 'images/incidents.png' %}">
             Проишествия</a><br>
         <!--<a href="#"><img class="iconbar" src="{% static 'images/systems.png' %}"> Инженерные системы</a><br>-->
         <a href="{% url 'dispatching' %}"><img class="iconbar" src="{% static 'images/dispatching.png' %}">
             Диспетчеризация</a><br>
-        <a href="#"><img class="iconbar" src="{% static 'images/analitic.png' %}"> Аналитика</a><br>
-        <a href="{% url 'documentation' %}"><img class="iconbar" src="{% static 'images/documents.png' %}"> Техническая
+        <a href="#"><img class="iconbar" src="{% static 'images/analitic.png' %}"> Отчеты</a><br>
+        <a href="{% url 'article_list' %}"><img class="iconbar" src="{% static 'images/documents.png' %}"> Техническая
             литература</a><br>
-        <a href="{% url 'main' %}" align="center"><img class="iconbar" src="{% static 'images/documents.png' %}">
-            Электронная
-            шахматка МКД</a><br>
+        <a href="#"><img class="iconbar" src="{% static 'images/standart.png' %}">Стандарты технических помещений</a><br>
         <a href="#"><img class="iconbar" src="{% static 'images/forum.png' %}"> Форум</a><br>
-        <a href="#"><img class="iconbar" src="{% static 'images/filosofy.png' %}" align="center"> Ценности и филосифия
-            инженера</a><br>
-        <a href="/admin"><img class="iconbar" src="{% static 'images/dispatching.png' %}"> Админ панель</a><br>
+        <a href="/admin"><img class="iconbar" src="{% static 'images/admin.png' %}"> Управление сервисом</a><br>
 
     </div>
 

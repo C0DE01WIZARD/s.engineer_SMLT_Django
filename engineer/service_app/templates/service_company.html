@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block main %}
+<title>{{title}}</title>
+<h1 class="titletext" align="center">Сервисные КА</h1>
+
+{% for service in service_company %}
+<div class="service_company_home">
+    <div class="service_company">
+        <img class="img_company" src={{ service.image.url }}>
+        <h4> Название компании: {{ service.names_company }}</h4>
+        <h4> Деятельность: {{ service.title }}</h4>
+        <h4> Генеральный директор: {{ service.company_director }}</h4>
+        <h4> Качество обслуживания (оценка от 1 до 5): {{ service.quality_of_service }}</h4>
+        <h4> Номер договора: {{ service.contract_number }}</h4>
+        <h4> Номер аварийной службы: {{ service.phone }}</h4>
+
+        <a href="{% url 'add_service_company' %}" class="btnaddemergency2">Добавить контрагента</a>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
