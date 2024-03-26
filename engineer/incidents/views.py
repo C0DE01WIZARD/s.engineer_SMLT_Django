@@ -15,6 +15,7 @@ class Emergency(ListView):
     context_object_name = 'emergency'
 
 
+
 def Add(request):
     """Функция добавления аварий"""
     if request.method == 'POST':

@@ -8,6 +8,7 @@ urlpatterns = [
     # url HTML page
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
+
     path('', include('systems.urls')),
     path('', include('blog_app.urls')),
     path('', include('users.urls')),
