@@ -300,11 +300,15 @@ height: 24px;
 
 /* Страница авторизации */
 .photologin{
+
     border-radius: 8px;
-    height: 483px;
-    width: 1015px;
+    height: 583px;
+    width: 1415px;
     margin-left: 250px;
     padding-top: 25px;
+    box-shadow: 5px 5px 5px 5px gray;
+
+
 }
 
 .btnauth{
@@ -322,6 +326,11 @@ height: 24px;
 
     margin-left:60px;
     margin-top:15px;
+}
+.form-input{
+
+    font-size: 19px;
+    border-radius:6px;
 
 }
 

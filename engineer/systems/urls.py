@@ -1,11 +1,15 @@
 from django.urls import path
-from . import views
+
+import users.views
 from .views import Equipments, List_Equimpents
 from .views import EquipmentsAPIView
+from users.views import login_user
+from systems import views
 
 urlpatterns = [
     # paths HTML
-    path('', views.main, name='main'),
+    path('', users.views.login_user, name='login'),
+    path('main/', views.main, name='main'),
     path('equipments/', Equipments.as_view(), name='equipments'),
     path('equipments/', Equipments.as_view(), name='equipments'),
     path('add/', views.add, name='add_equipments'),

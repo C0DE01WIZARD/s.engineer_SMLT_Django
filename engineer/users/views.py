@@ -18,7 +18,7 @@ def login_user(request):
                 return HttpResponseRedirect(reverse('main'))
     else:
         form = LoginUserForm()
-    return render(request, 'users/login.html', {'form': form})
+    return render(request, 'users/login.html', {'form': form, 'title': 's.engineer'},)
 
 
 def logout_user(request):

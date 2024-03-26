@@ -26,16 +26,27 @@ class Location(models.Model):
         verbose_name_plural = 'Объекты'
 
 
+class Company(models.Model):
+    name = models.CharField('Название юридического лица', max_length=255)
+
+    def __str__(self):
+        return f'{self.name}'
+
+    class Meta:
+        verbose_name = 'Компания'
+        verbose_name_plural = 'Компании'
+
+
 class Address(models.Model):
     location = models.ForeignKey(Location, verbose_name='Выберите локацию', on_delete=models.CASCADE)
     city = models.CharField('Город', max_length=50)
     settlement = models.CharField('Поселение', max_length=50)
     street = models.CharField('Улица', max_length=50)
     home = models.CharField('Дом', max_length=50)
-    corps = models.CharField('Корпус', max_length=50)
+
 
     def __str__(self):
-        return f'г.{self.city}, поселение {self.settlement}, улица {self.street}, дом {self.home}{self.corps}'
+        return f'г.{self.city}, поселение {self.settlement}, улица {self.street}, дом {self.home}'
 
     class Meta:
         verbose_name = 'Адрес'
@@ -56,13 +67,13 @@ class Quality_of_service(models.Model):
 class Service_company(models.Model):
     names_company = models.CharField('Название компании', max_length=50)
     contract_number = models.CharField('Номер договора', max_length=50)
-    image = models.ImageField('Изображение', upload_to='service_company/', default='изображение любого формата', null=True)
+    image = models.ImageField('Изображение', upload_to='service_company/', default='изображение любого формата',
+                              null=True)
     title = models.TextField('Деятельность компании', max_length=500, default='')
     company_director = models.CharField('ФИО директора компании', max_length=100)
     quality_of_service = models.ForeignKey(Quality_of_service, on_delete=models.CASCADE,
                                            verbose_name='Качество обслуживания от 1 до 5')
     phone = models.CharField("Номер телефона аварийной бригады", max_length=12, default='')
-
 
     def __str__(self):
         return self.names_company
@@ -96,9 +107,10 @@ class Equipment(models.Model):
     manufacturer = models.CharField('Производитель', max_length=50)
     model = models.CharField('Модель оборудования', max_length=50)
     year = models.IntegerField('Год ввода в эксплуатацию')
+    passport_number = models.IntegerField('Номер в паспорте (при наличии)', null=True, blank=True)
+    location = models.ForeignKey(Location, verbose_name='Локация', on_delete=models.PROTECT, default='')
+    company = models.ForeignKey(Company, verbose_name='Юридическое лицо', on_delete=models.PROTECT, default='' )
     address = models.ForeignKey(Address, on_delete=models.PROTECT, verbose_name='Адрес', default='')
-
-    # number = models.CharField("Номер ИТП (если присвоено)", max_length=20, default='')
 
     def __str__(self):
         return self.equipment

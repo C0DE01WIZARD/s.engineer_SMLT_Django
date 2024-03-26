@@ -17,6 +17,9 @@ from .serializers import *
 #     queryset = Equipment.objects.all()
 #     serializer_class = EquipmentSerializer
 
+
+
+
 class EquipmentsAPIView(APIView):
     def get(self, requests):
         tasks_list = Tasks.objects.all().values()
