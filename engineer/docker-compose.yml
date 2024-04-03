@@ -1,0 +1,28 @@
+services:
+  s.engineer-app:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./engineer_project:/engineer_project
+    environment:
+      - DB_HOST=s.engineer-db
+      - DB_NAME=s_engineer
+      - DB_USER=s_engineer
+      - DB_PASS=s_engineer
+    command: >
+      sh -c "python manage.py runserver"
+    depends_on:
+      - s.engineer-db
+
+
+  s.engineer-db:
+    image: postgres:14.6-alpine
+    restart: always
+    environment:
+      - POSTGRES_DB=s_engineer
+      - POSTGRES_USER=s_engineer
+      - POSTGRES_PASSWORD=s_engineer
+    ports:
+      - '5432:5432'

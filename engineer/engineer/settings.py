@@ -7,14 +7,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = SECRET_KEY
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0', '192.168.1.38']
+
+ALLOWED_HOSTS = ['127.0.0.1','s_engineer', 'your_server_domain_or_IP']
 # django_tool_bar
 INTERNAL_IPS = ['127.0.0.1']
 CELERY_BROKER_URL = "redis://127.0.0.1:6379/0"
 CELERY_RESULT_BACKEND = "redis://127.0.0.1:6379/0"
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
-
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -78,13 +78,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 WSGI_APPLICATION = 'engineer.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-DATABASES = DB_SECRET
-
-# Password validation
-# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
+DATABASES = {'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 's_engineer',
+    'USER': 's_engineer',
+    'PASSWORD': 's_engineer',
+    'HOST': 'localhost',
+    'PORT': '5432',
+}
+}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -117,8 +119,6 @@ CACHES_REDIS = {
         }
     }
 }
-
-
 
 # SETTINGS LOGGING
 LOGGING = {

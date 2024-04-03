@@ -1,0 +1,15 @@
+FROM python:latest
+
+WORKDIR /engineer_project
+
+RUN pip install --upgrade pip
+COPY ./requirements.txt /engineer_project/requirements.txt
+RUN pip install -r /engineer_project/requirements.txt
+COPY . /engineer_project
+EXPOSE 9000
+
+RUN adduser --disabled-password engineer-user
+USER engineer-user
+
+
+

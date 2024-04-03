@@ -54,7 +54,7 @@ class Address(models.Model):
 
 
 class Quality_of_service(models.Model):
-    quality = models.CharField('Качество обслуживания')
+    quality = models.CharField('Качество обслуживания', max_length=10)
 
     def __str__(self):
         return f'{self.quality}'
@@ -68,7 +68,7 @@ class Service_company(models.Model):
     names_company = models.CharField('Название компании', max_length=50)
     contract_number = models.CharField('Номер договора', max_length=50)
     image = models.ImageField('Изображение', upload_to='service_company/', default='изображение любого формата',
-                              null=True)
+                               null=True)
     title = models.TextField('Деятельность компании', max_length=500, default='')
     company_director = models.CharField('ФИО директора компании', max_length=100)
     quality_of_service = models.ForeignKey(Quality_of_service, on_delete=models.CASCADE,
