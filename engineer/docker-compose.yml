@@ -7,7 +7,7 @@ services:
     volumes:
       - ./engineer_project:/engineer_project
     environment:
-      - DB_HOST=s.engineer-db
+      - DB_HOST=s.engineer_project-db
       - DB_NAME=s_engineer
       - DB_USER=s_engineer
       - DB_PASS=s_engineer

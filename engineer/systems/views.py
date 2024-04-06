@@ -2,23 +2,14 @@ from django.forms import model_to_dict
 from django.http import HttpResponseNotFound
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
-from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from django.views.decorators.cache import cache_page
 
 
 from .forms import FormAdd, FormAddTasks
 from .models import *
 from .serializers import *
-
-
-# class EquipmentsAPIView(generics.ListAPIView):
-#     """Класс для вывода спсика оборудования"""
-#     queryset = Equipment.objects.all()
-#     serializer_class = EquipmentSerializer
-
-
-
 
 class EquipmentsAPIView(APIView):
     def get(self, requests):
@@ -57,10 +48,10 @@ def main(request):
     return render(request, "main.html", data)
 
 
-class Equipments(ListView):
-    model = Systems
-    template_name = "equipments.html"
-    context_object_name = 'systems'
+def Equipments(request):
+    systems = Systems.objects.all()
+               # filter(system_name='ИТП'))
+    return render(request, 'equipments.html', {'title': 'Оборудование', 'systems':systems})
 
 
 def add(request):

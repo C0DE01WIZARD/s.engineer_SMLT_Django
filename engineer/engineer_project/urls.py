@@ -13,7 +13,7 @@ urlpatterns = [
     path('', include('blog_app.urls')),
     path('', include('users.urls')),
     path('', include('feedback.urls')),
-    path('', include('dispatching.urls')),
+    path('', include('dispatching_app.urls')),
     path('', include('incidents.urls')),
     path('', include('documentation.urls')),
     path('', include('service_app.urls')),
@@ -22,7 +22,7 @@ urlpatterns = [
 ]
 
 handler404 = page_not_found  # exception 404 Not found
-admin.site.site_header = 'Управление сервисом s.engineer'
+admin.site.site_header = 'Управление сервисом s.engineer_project'
 admin.site.index_title = 'S.ENGINEER'
 
 

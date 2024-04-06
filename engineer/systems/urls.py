@@ -10,8 +10,7 @@ urlpatterns = [
     # paths HTML
     path('', users.views.login_user, name='login'),
     path('main/', views.main, name='main'),
-    path('equipments/', Equipments.as_view(), name='equipments'),
-    path('equipments/', Equipments.as_view(), name='equipments'),
+    path('equipments/', views.Equipments, name='equipments'),
     path('add/', views.add, name='add_equipments'),
     path('list_equipments/', views.List_Equimpents, name='list_equipments'),
     path('add_tasks/', views.Add_tasks, name='add_tasks'),

@@ -7,12 +7,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = SECRET_KEY
 DEBUG = True
 
-
-ALLOWED_HOSTS = ['127.0.0.1','s_engineer', 'your_server_domain_or_IP']
+ALLOWED_HOSTS = ['127.0.0.1', 's_engineer', 'your_server_domain_or_IP']
 # django_tool_bar
 INTERNAL_IPS = ['127.0.0.1']
+
 CELERY_BROKER_URL = "redis://127.0.0.1:6379/0"
 CELERY_RESULT_BACKEND = "redis://127.0.0.1:6379/0"
+
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 
@@ -28,7 +29,7 @@ INSTALLED_APPS = [
     'incidents',
     'feedback',
     'users',
-    'dispatching',
+    'dispatching_app',
     'documentation',
     'service_app',
     'blog_app',
@@ -51,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'engineer.urls'
+ROOT_URLCONF = 'engineer_project.urls'
 
 TEMPLATES = [
     {
@@ -76,7 +77,7 @@ STATICFILES = (os.path.join(BASE_DIR, 'static/')),
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-WSGI_APPLICATION = 'engineer.wsgi.application'
+WSGI_APPLICATION = 'engineer_project.wsgi.application'
 
 DATABASES = {'default': {
     'ENGINE': 'django.db.backends.postgresql',
@@ -110,17 +111,17 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CACHES_REDIS = {
+CACHES = {
     "default": {
         "BACKEND": "django.core.cache.backends.redis.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/0",
-        'OPTIONS': {
-            'db': '1',
+        "LOCATION": "redis://127.0.0.1:6379",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
     }
 }
 
-# SETTINGS LOGGING
+# ЛОГГИРОВАНИЕ SQL
 LOGGING = {
     'version': 1,
     'handlers': {
