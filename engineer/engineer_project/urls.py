@@ -17,6 +17,8 @@ urlpatterns = [
     path('', include('incidents.urls')),
     path('', include('documentation.urls')),
     path('', include('service_app.urls')),
+    path('', include('purchase_app.urls')),
+
     # url django_debug_toolbar
     path("__debug__/", include("debug_toolbar.urls")),
 ]

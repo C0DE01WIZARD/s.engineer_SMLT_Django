@@ -107,10 +107,12 @@ class Equipment(models.Model):
     manufacturer = models.CharField('Производитель', max_length=50)
     model = models.CharField('Модель оборудования', max_length=50)
     year = models.IntegerField('Год ввода в эксплуатацию')
-    passport_number = models.IntegerField('Номер в паспорте (при наличии)', null=True, blank=True)
+    passport_number = models.IntegerField('Номер в паспорте (при наличии)', null=True, blank=True, default='')
+    quantity = models.IntegerField('Количество', null=True, blank=True)
     location = models.ForeignKey(Location, verbose_name='Локация', on_delete=models.PROTECT, default='')
     company = models.ForeignKey(Company, verbose_name='Юридическое лицо', on_delete=models.PROTECT, default='' )
     address = models.ForeignKey(Address, on_delete=models.PROTECT, verbose_name='Адрес', default='')
+
 
     def __str__(self):
         return self.equipment

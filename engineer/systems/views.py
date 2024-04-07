@@ -4,12 +4,10 @@ from django.shortcuts import render, redirect
 from django.views.generic import ListView
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from django.views.decorators.cache import cache_page
-
-
 from .forms import FormAdd, FormAddTasks
 from .models import *
 from .serializers import *
+
 
 class EquipmentsAPIView(APIView):
     def get(self, requests):
@@ -24,7 +22,6 @@ class EquipmentsAPIView(APIView):
         return Response({'post': model_to_dict(tasks_new)})
 
 
-
 def page_not_found(request, exception):
     message = "<h1>404 Страница не найдена</h1>"
     return HttpResponseNotFound(message)
@@ -36,10 +33,19 @@ class AddEquipments(ListView):
     context_object_name = 'add_equipments'
 
 
-def List_Equimpents(request):
+class Filter_Address:
+    """Фильтры по адресам"""
+
+    def get_addres(self):
+        return Address.objects.all()
+
+    # class List_Equipments(Filter_Address, ListView):
+
+
+def List_itp(request):
     model = Equipment.objects.all()
-    l = {'list': model}
-    return render(request, "list_equipments.html", l)
+    l = {'list': model, 'title': 'Оборудование ИТП'}
+    return render(request, "itp.html", l)
 
 
 def main(request):
@@ -49,20 +55,17 @@ def main(request):
 
 
 def Equipments(request):
-    systems = Systems.objects.all()
-               # filter(system_name='ИТП'))
-    return render(request, 'equipments.html', {'title': 'Оборудование', 'systems':systems})
+    return render(request, 'equipments.html', {'title': 'Оборудование'})
 
 
-def add(request):
+def Add_equipments(request):
     """Функция добавления оборудования"""
     if request.method == 'POST':
-        form = FormAdd(request.POST) # создаем экземпляр нашей формы и передаём POST
-        if form.is_valid(): # проверка валидности формы
+        form = FormAdd(request.POST)  # создаем экземпляр нашей формы и передаём POST
+        if form.is_valid():  # проверка валидности формы
             try:
                 form.save()
-                print(form.cleaned_data, 'Данные переданы через POST запрос!!!')
-                return redirect('list_equipments')
+                return redirect('list_equipments_itp')
             except:
                 form.add_error(None, 'Ошибка добавления оборудования')
     else:
@@ -71,7 +74,7 @@ def add(request):
 
 
 def Add_tasks(request):
-    "Функция добавления оборудования"
+    """Функция для добавления задач"""
     if request.method == 'POST':
         form = FormAddTasks(request.POST)
         if form.is_valid():

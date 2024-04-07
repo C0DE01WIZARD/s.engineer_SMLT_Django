@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'documentation',
     'service_app',
     'blog_app',
+    'purchase_app',
     'rest_framework',
     # 'corsheaders',
     'django_extensions',

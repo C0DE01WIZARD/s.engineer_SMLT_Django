@@ -1,9 +1,8 @@
 from django.urls import path
 
 import users.views
-from .views import Equipments, List_Equimpents
+from .views import *
 from .views import EquipmentsAPIView
-from users.views import login_user
 from systems import views
 
 urlpatterns = [
@@ -11,8 +10,9 @@ urlpatterns = [
     path('', users.views.login_user, name='login'),
     path('main/', views.main, name='main'),
     path('equipments/', views.Equipments, name='equipments'),
-    path('add/', views.add, name='add_equipments'),
-    path('list_equipments/', views.List_Equimpents, name='list_equipments'),
+    path('add_equipments/', views.Add_equipments, name='add_equipments'),
+    path('list_equipments_itp/', views.List_itp,
+         name='list_equipments_itp'),
     path('add_tasks/', views.Add_tasks, name='add_tasks'),
 
     # paths API

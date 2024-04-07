@@ -6,8 +6,9 @@
 
 {% for l in list %}
 <div class="addequipments">
-     <h5><strong>{{ l.address }}</strong></h5>
-    <h5>Наименование оборудования:{{ l.equipment|upper }}</h5>
+    <h4>{{ l.address }}</h4>
+    <h3>{{ l.equipment }}</h3>
+    <h3>Количество: {{ l.quantity }}</h3>
 
 </div>
 {% endfor %}<br>

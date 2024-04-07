@@ -6,9 +6,7 @@ margin: 0;
 padding: 0;
 }
 
-a {
-    text-decoration: none; /* Убираем подчёркивание */
-}
+
 
 li {
     text:white;
@@ -383,6 +381,12 @@ height: 39px;
 width: 33px;
 }
 
+.top{
+margin-left:420px;
+height:20px;
+width:20px;
+
+}
 
 
 
@@ -431,7 +435,6 @@ width: 33px;
 .addequipments{
     font-family: 'CoFo Sans', sans-serif;
     font-size: 14px;
-    height:800px;
     align:center;
     border-radius:8px;
     border: 0px solid black;
@@ -439,8 +442,8 @@ width: 33px;
     margin-left:256px;
     padding: 4px 3px;
     width:997px;
-    height:82px;
-    box-shadow: 3px 3px 3px gray;
+    height:105px;
+    box-shadow: 3px 3px 3px 3px gray;
 }
 
 .btnaddequipments{
@@ -625,32 +628,23 @@ width: 33px;
 
 /* Страница "Сервисные КА" */
 
-.service_company_home{
-    font-family: 'CoFo Sans', sans-serif;
-    font-size: 17px;
-    height:211px;
-    width:50%;
-    margin-left:253px;
-    margin-top:0px;
-
-}
-
 .service_company{
-    background-color: white;
-    color: #007bfb;
-    text-align: left;
-    border: 1px;
-    border-radius:15px;
-    height: 251%;
-    width: 77%;
-    margin-left:0px;
-    font-family: 'CoFo Sans', sans-serif;
-    font-size: 14px;
-    position: relative;
-    padding: 5px 5px;
-    box-shadow: 3px 3px 3px gray;
-    margin-top:352px;
+  background-color: white;
+  color: #007bfb;
+  text-align: left;
+  border: 1px;
+  border-radius: 15px;
+  height: 58%;
+  width: 85%;
+  margin-left: 231px;
+  font-family: 'CoFo Sans', sans-serif;
+  font-size: 14px;
+  position: relative;
+  padding: 5px 5px;
+  box-shadow: 3px 3px 3px 4px gray;
+  margin-top: 46px;
 }
+
 
 .img_company{
     border-radius:22px;
