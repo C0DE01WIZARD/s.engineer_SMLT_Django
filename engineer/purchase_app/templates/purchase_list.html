@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block main %}
+<h1 class="titletext" align="center">Список закупок</h1>
+
+<div class="article_list">
+    {% for list in list %}
+
+    <h5 align="left">{{ list.purchase }}</h5>
+    <h5 align="left">Система: {{ list.system }}</h5>
+    <h5 align="left">Адрес: {{ list.address }}</h5>
+    <h5 align="left">Цена: {{ list.price }} рублей</h5>
+    <h5 align="left">Статус: {{ list.status }}</h5><hr>
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -10,7 +10,8 @@ from .serializers import *
 
 
 class EquipmentsAPIView(APIView):
-    def get(self, requests):
+    """Метод за отбработку GET запросов"""
+    def get(self, request):
         tasks_list = Tasks.objects.all().values()
         return Response({'ЗАДАЧИ': list(tasks_list)})
 
@@ -74,6 +75,7 @@ def Add_equipments(request):
 
 
 def Add_tasks(request):
+    tasks = Tasks.objects.all()
     """Функция для добавления задач"""
     if request.method == 'POST':
         form = FormAddTasks(request.POST)
@@ -81,9 +83,9 @@ def Add_tasks(request):
             try:
                 form.save()
                 print(form.cleaned_data, 'Данные переданы через POST запрос!!!')
-                return redirect('main')
+                return redirect('add_tasks')
             except:
                 form.add_error(None, 'Ошибка добавления задачи')
     else:
         form_tasks = FormAddTasks()
-    return render(request, 'add_tasks.html', {'form': form_tasks})
+    return render(request, 'add_tasks.html', {'form': form_tasks, 'tasks': tasks})

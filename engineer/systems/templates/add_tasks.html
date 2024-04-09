@@ -19,6 +19,9 @@
             <button class="btnfeedback" type="submit">Добавить</button>
             <br>
         </form>
+        Задачи:{% for tasks in tasks %}<br>
+        {{ tasks.tasks }}
+        {% endfor %}
 
     </div>
 </div>

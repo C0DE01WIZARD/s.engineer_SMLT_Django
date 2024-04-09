@@ -142,8 +142,8 @@
         <a href="{% url 'main' %}"><img class="iconbar" src="{% static 'images/Home.png' %}"> Главная</a><br>
         <a href="{% url 'equipments' %}"><img class="iconbar" src="{% static 'images/EQUIPMENT.png' %}">
             Оборудование</a><br>
-        <a href="#"><img class="iconbar" src="{% static 'images/sale.png' %}">
-            Закупки</a><br>
+        <a href="{% url 'add_purchase' %}"><img class="iconbar" src="{% static 'images/sale.png' %}">Закупки</a><br>
+
         <a href="{% url 'service_home_page' %}" class="dropdown"><img class="iconbar"
                                                                       src="{% static 'images/service.png' %}">
             Сервис</a><br>
