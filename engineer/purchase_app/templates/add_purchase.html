@@ -3,8 +3,9 @@
 {% block main %}
 <title>{{title}}</title>
 <h1 class="titletext" align="center">Закупки</h1>
-<div class="add">
 
+<div class="add">
+<a href="{% url 'purchase_list' %}" id="">Перейти в список закупок</a>
     <div id="add">
         <h3 align="center">{{ post }}</h3>
         <form action="{% url 'add_purchase' %}" method="post">
@@ -16,7 +17,7 @@
             <div class="form-error">{{ f.errors }}</div>
             {% endfor %}
             <button class="btnaddpurchase" type="submit">Добавить в список закупок</button><br>
-            <a href="{% url 'purchase_list' %}">Перейти в список закупок</a>
+
             <br>
         </form>
     </div>
