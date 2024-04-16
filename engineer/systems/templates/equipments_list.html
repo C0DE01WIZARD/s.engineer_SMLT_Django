@@ -2,13 +2,13 @@
 {% load static %}
 {% block main %}
 <title>{{title}}</title>
-<h1 class="titletext" align="center">Список оборудования ИТП</h1>
+<h1 class="titletext" align="center">Список оборудования {{system}}</h1>
 
-{% for l in list %}
+{% for list in list %}
 <div class="addequipments">
-    <h4>{{ l.address }}</h4>
-    <h3>{{ l.equipment }}</h3>
-    <h3>Количество: {{ l.quantity }}</h3>
+    <h4>{{ list.address }}</h4>
+    <h3>{{ list.equipment }}</h3>
+    <h3>Количество: {{ list.quantity }}</h3>
 
 </div>
 {% endfor %}<br>

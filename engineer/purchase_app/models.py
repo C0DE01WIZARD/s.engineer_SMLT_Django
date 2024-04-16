@@ -35,7 +35,7 @@ class Purchase(models.Model):
     purchase = models.CharField('Наименование(материал, запчасть)', max_length=50)
     system = models.ForeignKey(Systems, on_delete=models.SET_NULL, verbose_name='Выберите систему', null=True)
     address = models.ForeignKey(Address, on_delete=models.SET_NULL, verbose_name='Адрес', null=True)
-    price = models.CharField('Цена, в рублях', max_length=50)
+    price = models.IntegerField('Цена, в рублях')
     status = models.ForeignKey(Status_purchase, verbose_name='Статус закупки', on_delete=models.SET_NULL, null=True)
     necessity = models.ForeignKey(Select_necessuty, verbose_name='Необходимость', on_delete=models.SET_NULL, null=True)
     incident = models.ForeignKey(Incidents, verbose_name='Выберите проишествие в системе s.engineer', on_delete=models.SET_NULL, null=True, blank=True)

@@ -4,18 +4,17 @@
 <title>{{title}}</title>
 <h1 class="titletext" align="center">Оборудование</h1>
 
-<div class="systems">
-     <br>
-     <a href ="{% url 'list_equipments_itp' %}" class="systems_detail"><img class="iconbarsys" src="{% static 'images/systems22.png' %}">ИТП(Индивидуальный тепловой пункт)</a><br><br>
-     <a href="ov" class="systems_detail"><img class="iconbarsys" src="{% static 'images/systems22.png' %}">ОВ(Отопление и вентиляция)</a><br><br>
-     <a href="vk" class="systems_detail"><img class="iconbarsys" src="{% static 'images/systems22.png' %}">ВК(Водоснабжение и канализация)</a><br><br>
-     <a href="lift" class="systems_detail"><img class="iconbarsys" src="{% static 'images/systems22.png' %}">Лифтовое хозяйство</a><br><br>
-     <a href="fire_systems" class="systems_detail"><img class="iconbarsys" src="{% static 'images/systems22.png' %}">АПС,СОУЭ,ДУ ППА(Пожарное оборудование)</a><br><br>
-     <a href="eom" class="systems_detail"><img class="iconbarsys" src="{% static 'images/systems22.png' %}">ЭОМ(Электрика)</a><br><br>
- </div>
+<div class="row">
+{% for list in list %}
+    <div class="col-md-4 product-men">
+        <h2> {{ list.system_name}}</h2>
+        <img src = "{{list.image.url}}" class="systems_icon">
+        <h4> Полное название: {{ list.full_name}}</h4>
+        <h4>Обслуживающая компания: {{ list.service_company}}</h4>
 
+        <h4>Локация: {{ list.location}}</h4>
+        <a href="{{list.url}}" class="viewing">Перейти к списку оборудования {{ list.system_name}} </a><br>
+    </div><br>
 
-</div>
-</div>
-
+{% endfor %}
 {% endblock %}

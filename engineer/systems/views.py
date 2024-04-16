@@ -27,6 +27,18 @@ def page_not_found(request, exception):
     message = "<h1>404 Страница не найдена</h1>"
     return HttpResponseNotFound(message)
 
+def Equipments_itp(request):
+    model = Equipment.objects.filter(cat_id='1')
+    system = 'ИТП'
+    list = {'list': model, 'title': 'Оборудование '+system, 'system': system}
+    return render(request, 'equipments_list.html', list)
+
+def Equipments_ov(request):
+    model = Equipment.objects.filter(cat_id='2')
+    system = 'ОВ'
+    list = {'list': model, 'title': 'Оборудование '+ system, 'system': system}
+    return render(request, 'equipments_list.html', list)
+
 
 class AddEquipments(ListView):
     model = Equipment
@@ -42,13 +54,6 @@ class Filter_Address:
 
     # class List_Equipments(Filter_Address, ListView):
 
-
-def List_itp(request):
-    model = Equipment.objects.all()
-    l = {'list': model, 'title': 'Оборудование ИТП'}
-    return render(request, "itp.html", l)
-
-
 def main(request):
     tasks = Tasks.objects.all()
     data = {'title': 'Главная страница', 'tasks': tasks}
@@ -56,7 +61,9 @@ def main(request):
 
 
 def Equipments(request):
-    return render(request, 'equipments.html', {'title': 'Оборудование'})
+    model = Systems.objects.all()
+    l = {'list': model, 'title': 'Оборудование'}
+    return render(request, 'equipments.html', l)
 
 
 def Add_equipments(request):
