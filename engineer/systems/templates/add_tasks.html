@@ -1,5 +1,6 @@
 {% extends 'main.html' %}
 {% load static %}
+
 {% block main %}
 <title>{{title}}</title>
 <h1 class="titletext" align="center">Добавить задачу</h1>
@@ -19,9 +20,9 @@
             <button class="btnfeedback" type="submit">Добавить</button>
             <br>
         </form>
-        Задачи:{% for tasks in tasks %}<br>
-        {{ tasks.tasks }}
-        {% endfor %}
+<!--        Задачи:{% for tasks in tasks %}<br>-->
+<!--        {{ tasks.tasks }}-->
+<!--        {% endfor %}-->
 
     </div>
 </div>

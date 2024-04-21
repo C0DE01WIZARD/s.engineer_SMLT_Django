@@ -1,12 +1,13 @@
 {% extends 'main.html' %}
 {% load static %}
 {% block main %}
-<h1 class="titletext" align="center">Список закупок</h1>
+<title>{{ title }}</title>
+<h1 class="titletext" align="center">Приобретение материала или услуги</h1>
 <h4 class="btnaddemergency2">Количество необходимых закупок: {{ list|length }}</h4>
 <h4 class="btnaddemergency2" title="Функция на данный момент недоступна">Общая сумма: {{ list.price.all }} RUB</h4>
+ <a href="/add_purchase/" class="btnaddemergency2">Добавить заявку на закупку материала или услуги</a><br><br>
 <div id="purchaselist">
     {% for list in list %}
-
     <h5 align="left">{{ forloop.counter }} : {{ list }}</h5>
     <h5 align="left">Система: {{ list.system }}</h5>
     <h5 align="left">Адрес: {{ list.address }}</h5>
@@ -14,6 +15,6 @@
     <h5 align="left">Статус: {{ list.status }}</h5><hr>
     {% endfor %}
 </div><br>
-  <a href="/add_purchase/" class="btnaddemergency2">Добавить</a>
+
 
 {% endblock %}

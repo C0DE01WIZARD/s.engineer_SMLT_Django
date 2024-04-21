@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     # 'corsheaders',
     'django_extensions',
     # the debug toolbar
-    'debug_toolbar'
+    'debug_toolbar',
+
+
 ]
 
 MIDDLEWARE = [
@@ -137,5 +139,8 @@ LOGGING = {
 
     }
 }
+
+
+
 
 # logging = str(LOGGING)

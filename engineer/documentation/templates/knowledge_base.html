@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+{% block main %}
+<title>{{title}}</title>
+<h1 class="titletext" align="center">{{title}}</h1>
+
+<div class="row2">
+    {% for knowlege in knowl %}
+    <div class="col-md-41 product-men">
+        <h2> {{knowlege.name }}</h2>
+        <hr>
+        <img src="{{knowlege.image.url}}" class="article_icon">
+        <hr>
+        <h4>Тип: {{ knowlege.type_article}}</h4>
+        <h4>Дата добавления: {{ knowlege.added}}</h4><br>
+        <a href="{{list.url}}" class="viewing">Открыть и добавить в план |♡<a href="#">.</a> {{ list.system_name}} </a>
+    </div>
+
+{% endfor %}
+
+
+{% endblock %}

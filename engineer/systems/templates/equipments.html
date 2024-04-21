@@ -2,7 +2,7 @@
 {% load static %}
 {% block main %}
 <title>{{title}}</title>
-<h1 class="titletext" align="center">Оборудование</h1>
+<h1 class="titletext" align="center">{{title}}</h1>
 
 <div class="row">
 {% for list in list %}
@@ -11,10 +11,10 @@
         <img src = "{{list.image.url}}" class="systems_icon">
         <h4> Полное название: {{ list.full_name}}</h4>
         <h4>Обслуживающая компания: {{ list.service_company}}</h4>
-
         <h4>Локация: {{ list.location}}</h4>
-        <a href="{{list.url}}" class="viewing">Перейти к списку оборудования {{ list.system_name}} </a><br>
-    </div><br>
+        <a href="{{list.url}}" class="viewing">Перейти к списку оборудования {{ list.system_name}} </a><br><br>
+        <a href="{{list.url}}" id="viewing1">Просмотр простоев {{ list.system_name}} </a><br>
+    </div>
 
 {% endfor %}
 {% endblock %}

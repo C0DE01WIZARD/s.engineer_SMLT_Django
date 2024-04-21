@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block main %}
+<title>{{title}}</title>
+<h1 class="titletext" align="center">Неисправности</h1>
+<a href="/add_defect/" class="btnaddemergency2">Добавить неисправность</a><br><br>
+{% for d in defect %}
+<div class="defects">
+    <a href="#"><h1>{{ forloop.counter }}: {{d.location}}/{{d.address}}/{{d.system}}/{{d.equipment}}/{{d.cause}}</h1></a>
+</div><br>
+{% endfor %}
+
+
+{% endblock %}

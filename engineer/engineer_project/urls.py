@@ -24,9 +24,8 @@ urlpatterns = [
 ]
 
 handler404 = page_not_found  # exception 404 Not found
-admin.site.site_header = 'Управление сервисом s.engineer_project'
+admin.site.site_header = 'Управление сервисом s.engineer'
 admin.site.index_title = 'S.ENGINEER'
-
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

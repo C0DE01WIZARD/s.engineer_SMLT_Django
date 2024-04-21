@@ -13,12 +13,12 @@ def Add_Purchase_View(request):
         if form.is_valid():  # проверка валидности формы
             try:
                 form.save()
-                return redirect('add_purchase')
+                return redirect('purchase_list',)
             except:
                 form.add_error(None, 'Ошибка добавления в список закупок')
     else:
         form = Form_Add_Purpase()
-    return render(request, 'add_purchase.html', {'form': form})
+    return render(request, 'add_purchase.html', {'form': form, 'title':'Добавление материала или услуги'})
 
 
 class Purchase_list(ListView):

@@ -246,8 +246,9 @@ hr{
 
 /*SIDENAV*/
 .sidenav {
+    font-size:10px;
     height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 220px; /* Set the width of the sidebar */
+    width: 216px;/* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
@@ -338,31 +339,31 @@ height: 24px;
 /* Страница "Оборудование" */
 .row {
   font-family: 'CoFo Sans', sans-serif;
+  font-size:14;
   margin-top: -3px;
   display: -webkit-box;
   flex-wrap: wrap;
   margin-right: -201px;
   margin-left: -75px;
-  padding: 10px;
 }
 
 .col-md-4 {
  border-radius: 27px;
   margin-left: 300px;
+  margin-top:34px;
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 23.333333%;
-    flex: 0 0 15.333333%;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 20.333333%;
   width: 15%;
-  height: 65%;
+  height: 45%;
   box-shadow: 4px 4px 4px 4px gray;
-  padding: 10px;
+  padding: 9px;
 }
 
 
 .systems_icon{
     width:63px;
     height:63px;
-
 }
 
 
@@ -391,6 +392,20 @@ height: 24px;
     width:90px;
     text-align: center;
     padding:4px;
+}
+
+#viewing1{
+    background-color:white;
+    height:4px;
+    width:30px;
+    text-decoration: none;
+    border:1px solid black;
+    border-radius:9px;
+    color: #007bfb;
+    padding:3px 3px 3px;
+    box-shadow: 2px 2px 1px 1px gray;
+
+}
 
 .iconbarsys {
 font-size: 12px;
@@ -442,7 +457,7 @@ width:20px;
     height:30px;
     text-align: center;
     margin-left:40px;
-    text-decoration: none;
+    cursor: pointer;
 }
 
 .addequipments{
@@ -501,12 +516,15 @@ width:20px;
 }
 
 .btnaddfeedback{
-    width:120px;
-    height:25px;
+    font-family: 'CoFo Sans', sans-serif;
+    font-size: 15px;
+    width:220px;
+    height:35px;
     background-color:#007bfb;
     color:white;
     border: 0px solid black;
     border-radius:5px;
+    cursor: pointer;
 }
 
 
@@ -519,28 +537,34 @@ width:20px;
 /* Страница "Диспетчеризация" */
 .dispatchinghome{
     font-family: 'CoFo Sans', sans-serif;
-    color:#007bfb;
-    background-color:white;
     width: 84%;
     height: 80%;
-    margin-left:249px;
-    border-radius:8px;
+    margin-left:15%;
+
+
 }
 
 .dispatchinghome td{
-    font-size: 15px;
-    color:#007bfb;
+    font-size: 16px;
+    padding: 5px;
+	border: none;
+	border-bottom: 2px solid black;
+	text-align:center;
 }
 
 .dispatchinghome th{
-    font-size: 15px;
+    font-size: 14px;
     color:#007bfb;
+    font-weight: bold;
+	border: none;
+	border-bottom: 5px solid;
+	border:18px;
 }
 
 /*Страница "Проишествия" */
 .emegencyhome{
     font-family: 'CoFo Sans', sans-serif;
-    font-size: 17px;
+    font-size: 14px;
     height:241px;
     width:1008px;
     margin-left:253px;
@@ -572,6 +596,7 @@ width:20px;
     height:50px;
     text-align: center;
     margin-left:40px;
+    cursor: pointer;
 }
 .btnaddemergency2{
     background-color:white;
@@ -604,23 +629,20 @@ width:20px;
 
 /*Страница "Сервис" */
 .service{
-    background-color:#007bfb;
-    color: white;
-    text-align: center;
-    border: none;
-    border-radius:15px;
-    height: 127%;
-    width: 165%;
-    margin-left:0px;
-    font-family: 'CoFo Sans', sans-serif;
-    font-size: 16px;
-    position: relative;
-    padding: 1px px;
+  background-color: #007bfb;
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 15px;
+  height: 20%;
+  width: 21%;
+  margin-left: 0px;
+  font-family: 'CoFo Sans', sans-serif;
+  font-size: 16px;
+  position: relative;
 }
 
 .service_home{
-    height:97px;
-    width:50%;
     margin-left:253px;
 }
 
@@ -634,10 +656,6 @@ width:20px;
     color: #007bfb;
     padding:3px 3px 3px;
     box-shadow: 2px 2px 1px 1px gray;
-
-
-
-
 
 }
 /* Страница "Сервисные КА" */
@@ -675,7 +693,7 @@ width:20px;
     width:90px;
     text-align: center;
 }
-/*Страница "Документация" */
+/*Страница "База знаний ИС" */
 .article_list{
     background-color: white;
     color: black;
@@ -690,6 +708,42 @@ width:20px;
     padding: 5px 5px;
     box-shadow: 3px 3px 3px gray;
     text-align: center;
+}
+
+.row2{
+  font-family: 'CoFo Sans', sans-serif;
+  font-size:14;
+  margin-top: -3px;
+  display: -webkit-box;
+  flex-wrap: wrap;
+  margin-right: -201px;
+  margin-left: -75px;
+}
+
+.col-md-41 {
+ background-color: #007bfb;
+ color: white;
+ border-radius: 27px;
+  margin-left: 300px;
+  margin-top:34px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 20.333333%;
+  max-width: 15%;
+  max-height: 45%;
+  box-shadow: 4px 4px 4px 4px gray;
+  padding: 9px;
+  transition: all 200ms ease;
+}
+
+.col-md-41:hover {
+    box-shadow: 0px 0px 0px 0px gray;
+    transition: all 600ms ease;
+}
+
+.article_icon{
+    max-width: 	100%;
+		height: auto;
 }
 
  /* Dropdown Button */
@@ -757,4 +811,22 @@ width:20px;
     margin-left:298px;
     width:1200px;
     height:1200px;
+}
+
+/*Страница "Неисправности" */
+.defects{
+    font-family: 'CoFo Sans', sans-serif;
+    font-size: 8px;
+    color:red;
+    text-align: left;
+    width:75%;
+    margin-left:229px;
+    border-radius:8px;
+    padding:5px;
+    box-shadow: 3px 3px 3px gray;
+}
+
+.defects a{
+    color:#007bfb;
+    text-decoration:none;
 }

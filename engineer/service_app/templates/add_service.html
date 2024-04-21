@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'main.html' %}
+{% load static %}
+{% block main %}
+<title></title>
+<h1 class="titletext" align="center">Добавить техническое обслуживание</h1>
+<div class="add">
+    <div id="add">
+        <h3 align="center">{{ post }}</h3>
+        <form action="{% url 'add_service' %}" method="post">
+            {% csrf_token %}
+            <div class="form-error">{{ form.non_field_errors }}</div>
 
-</body>
-</html>
+            {% for f in form %}
+            <p><label class="formadd" for="{{ f.id_for_label }}">{{f.label}} </label>{{ f }}</p>
+            <div class="form-error">{{ f.errors }}</div>
+            {% endfor %}
+            <button class="btnaddemergency" type="submit">Добавить ТО в график</button>
+            <br>
+        </form>
+
+    </div>
+</div>
+{% endblock %}

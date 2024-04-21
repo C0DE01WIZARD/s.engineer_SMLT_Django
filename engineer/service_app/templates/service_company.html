@@ -3,10 +3,11 @@
 {% block main %}
 <title>{{title}}</title>
 <h1 class="titletext" align="center">Сервисные КА</h1>
-
+<a href="{% url 'add_service_company' %}" class="btnaddemergency2">Добавить контрагента</a><br><br>
+<div class="row">
 {% for service in service_company %}
 
-    <div class="service_company">
+    <div class="col-md-4 product-men">
         <img class="img_company" src={{ service.image.url }}>
         <h4> Название компании: {{ service.names_company }}</h4>
         <h4> Деятельность: {{ service.title }}</h4>
@@ -15,7 +16,7 @@
         <h4> Номер договора: {{ service.contract_number }}</h4>
         <h4> Номер аварийной службы: {{ service.phone }}</h4>
 
-        <a href="{% url 'add_service_company' %}" class="btnaddemergency2">Добавить контрагента</a>
+
     </div>
 {% endfor %}
 {% endblock %}

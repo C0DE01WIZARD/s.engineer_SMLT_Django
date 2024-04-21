@@ -3,14 +3,17 @@
 {% block main %}
 <title>{{title}}</title>
 <h1 class="titletext" align="center">Сервис</h1>
+<a href="{% url 'add_service' %}"class="btnaddemergency2">Добавить ТО в график</a><br><br>
+<div class="row">
 {% for service in service_list %}
-<div class="service_home">
-    <div class="service">
+
+    <div class="col-md-4 product-men">
         <h2> {{ service.title}}</h2>
         <h4> {{service.short_description}}</h4>
         <a href="{{service.url}}" class="viewing">Перейти</a>
 
     </div>
-</div><br>
 {% endfor %}
+
+
 {% endblock %}

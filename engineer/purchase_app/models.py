@@ -1,7 +1,8 @@
 from django.db import models
 
-from incidents.models import Incidents
+from incidents.models import Incidents, Defect
 from systems.models import Systems, Address
+
 
 
 # Create your models here.
@@ -32,13 +33,14 @@ class Select_necessuty(models.Model):
 
 class Purchase(models.Model):
     """Создаем класс модели Закупки"""
-    purchase = models.CharField('Наименование(материал, запчасть)', max_length=50)
+    purchase = models.CharField('Наименование материала или услуги', max_length=50)
     system = models.ForeignKey(Systems, on_delete=models.SET_NULL, verbose_name='Выберите систему', null=True)
     address = models.ForeignKey(Address, on_delete=models.SET_NULL, verbose_name='Адрес', null=True)
     price = models.IntegerField('Цена, в рублях')
     status = models.ForeignKey(Status_purchase, verbose_name='Статус закупки', on_delete=models.SET_NULL, null=True)
     necessity = models.ForeignKey(Select_necessuty, verbose_name='Необходимость', on_delete=models.SET_NULL, null=True)
     incident = models.ForeignKey(Incidents, verbose_name='Выберите проишествие в системе s.engineer', on_delete=models.SET_NULL, null=True, blank=True)
+    defect = models.ForeignKey(Defect, verbose_name='Выберите дефект из списка', on_delete=models.SET_NULL, null=True, blank=True )
 
     def __str__(self):
         return self.purchase

@@ -4,8 +4,9 @@
 
 <title>{{title}}</title>
 <h1 class="titletext" align="center">Обратная связь</h1>
-<h5 align="center">Напишите свои пожелания по улучшению веб-сервиса s.engineer</h5>
+
 <div class="add">
+    <h5 align="center">Напишите свои пожелания по улучшению веб-сервиса s.engineer</h5>
     <img class="imgfeedback" src="{% static 'images/feedback.jpg' %}" class="homephoto2" align="center">
     <h1 align="center">{{ post }}</h1>
     <form action="{% url 'feedback' %}" method="post">

@@ -62,7 +62,7 @@ def main(request):
 
 def Equipments(request):
     model = Systems.objects.all()
-    l = {'list': model, 'title': 'Оборудование'}
+    l = {'list': model, 'title': 'Инженерные системы'}
     return render(request, 'equipments.html', l)
 
 
@@ -78,7 +78,7 @@ def Add_equipments(request):
                 form.add_error(None, 'Ошибка добавления оборудования')
     else:
         form = FormAdd()
-    return render(request, 'add.html', {'form': form})
+    return render(request, 'add.html', {'form': form, 'title':'Добавить оборудование'})
 
 
 def Add_tasks(request):
@@ -95,4 +95,4 @@ def Add_tasks(request):
                 form.add_error(None, 'Ошибка добавления задачи')
     else:
         form_tasks = FormAddTasks()
-    return render(request, 'add_tasks.html', {'form': form_tasks, 'tasks': tasks})
+    return render(request, 'add_tasks.html', {'form': form_tasks, 'tasks': tasks, 'title':'Задачи'})

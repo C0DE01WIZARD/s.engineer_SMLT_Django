@@ -8,12 +8,33 @@ from django.views.generic import ListView
 from .forms import *
 
 
+class Defect_list(ListView):
+    """Класс для просмотра списка дефектов"""
+    model = Defect
+    template_name = 'defect_list.html'
+    context_object_name = 'defect'
+
+
+def Add_Defect(request):
+    """Функция добавления дефектов"""
+    if request.method == 'POST':
+        form = FormAddDefects(request.POST)
+        if form.is_valid():
+            try:
+                form.save()
+                return redirect('defect_list')
+            except:
+                form.add_error(None, 'Ошибка добавления неисправности')
+    else:
+        form = FormAddDefects()
+    return render(request, 'add_defect.html', {'form': form})
+
+
 class Emergency(ListView):
     """Класс для оторбражения аварий на странице"""
     model = Incidents
     template_name = 'emergency.html'
     context_object_name = 'emergency'
-
 
 
 def Add(request):

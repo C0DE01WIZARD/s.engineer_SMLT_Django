@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block main %}
+<title></title>
+<h1 class="titletext" align="center">Добавить неисправность</h1>
+<div class="add">
+    <div id="add">
+        <h3 align="center">{{ post }}</h3>
+        <form action="{% url 'add_defect' %}" method="post">
+            {% csrf_token %}
+            <div class="form-error">{{ form.non_field_errors }}</div>
+
+            {% for defect in form %}
+            <p><label class="formadd" for="{{ defect.id_for_label }}">{{defect.label}} </label>{{ defect }}</p>
+            <div class="form-error">{{ defect.errors }}</div>
+            {% endfor %}
+            <button class="btnaddemergency" type="submit">Добавить неисправность</button>
+            <br>
+        </form>
+
+    </div>
+</div>
+{% endblock %}

@@ -1,3 +1,4 @@
+from incidents.models import Defect
 from .models import *
 from django import forms
 from django.core.mail import send_mail
@@ -12,6 +13,7 @@ class FormAddTasks(forms.ModelForm):
     class Meta:
         model = Tasks
         fields = '__all__'
+
 
 
 

@@ -26,9 +26,10 @@
                 <div class="dropdown-content">
                     <img class="iconbar" src="{% static 'images/icon.png' %}"><br>
                     {% for t in tasks %}
-                    {{t.tasks}}<br>Сроки:{{t.datetime|date:"d.m.Y H:i" }}<br>
-                    <input type="checkbox"><label>Выполнено:</label><br>
-                    <hr>
+                    {{ forloop.counter }}:{{t.tasks}}<br>Сроки:{{t.datetime|date:"d.m.Y H:i" }}<br>
+                    Срочность:{{t.urgency_task }}<br>
+                    <input type="checkbox"><label>Выполнено(BETA)</label><br><br>
+
                     {% endfor %}
                 </div>
             </div>
@@ -141,31 +142,32 @@
         <img src="{% static 'images/samicon.png' %} " class="samolet" align="center">
         <a href="{% url 'main' %}"><img class="iconbar" src="{% static 'images/Home.png' %}"> Главная</a><br>
         <a href="{% url 'equipments' %}"><img class="iconbar" src="{% static 'images/EQUIPMENT.png' %}">
-            Оборудование</a><br>
-        <a href="{% url 'add_purchase' %}"><img class="iconbar" src="{% static 'images/sale.png' %}">Закупки</a><br>
+            Инженерные системы</a><br>
+        <a href="{% url 'purchase_list' %}"><img class="iconbar" src="{% static 'images/sale.png' %}">Закупки и услуги</a><br>
 
         <a href="{% url 'service_home_page' %}" class="dropdown"><img class="iconbar"
                                                                       src="{% static 'images/service.png' %}">
             Сервис</a><br>
         <a href="{% url 'service_company' %}"><img class="iconbar" src="{% static 'images/KA.png' %}"> Сервисные КА</a><br>
 
-        <!-- <ul>
-             <a href="#"><span>Техническое обслуживание</span></a><br>
-             <a href="#"><span>Календарь ТО</span></a><br>
-             <a href="#"><span>Работы по наряду</span></a><br>
-             <a href="#"><span>Подготовка систем к ОЗП</span></a>
-         </ul> -->
-        <a href="#"><img class="iconbar" src="{% static 'images/attention.png' %}">
+<!--        <ul>-->
+<!--             <a href="#"><span>Техническое обслуживание</span></a><br>-->
+<!--             <a href="#"><span>Календарь ТО</span></a><br>-->
+<!--             <a href="#"><span>Работы по наряду</span></a><br>-->
+<!--             <a href="#"><span>Подготовка систем к ОЗП</span></a>-->
+<!--         </ul>-->
+        <a href="{% url 'defect_list' %}"><img class="iconbar" src="{% static 'images/attention.png' %}">
             Неисправности </a><br>
         <a href="{% url 'emergency' %}"><img class="iconbar" src="{% static 'images/incidents.png' %}">
             Проишествия</a><br>
         <!--<a href="#"><img class="iconbar" src="{% static 'images/systems.png' %}"> Инженерные системы</a><br>-->
         <a href="{% url 'dispatching' %}"><img class="iconbar" src="{% static 'images/dispatching.png' %}">
             Диспетчеризация</a><br>
-        <a href="#"><img class="iconbar" src="{% static 'images/analitic.png' %}"> Отчеты</a><br>
-        <a href="{% url 'article_list' %}"><img class="iconbar" src="{% static 'images/documents.png' %}"> Техническая
-            литература</a><br>
-        <a href="#"><img class="iconbar" src="{% static 'images/standart.png' %}">Стандарты технических помещений</a><br>
+        <!--<a href="#"><img class="iconbar" src="{% static 'images/analitic.png' %}"> Отчеты</a><br> -->
+         <a href="{% url 'knowledge_base' %}"><img class="iconbar" src="{% static 'images/standart.png' %}">База знаний ИС</a><br>
+<!--        <a href="{% url 'article_list' %}"><img class="iconbar" src="{% static 'images/documents.png' %}"> Техническая-->
+<!--            литература</a><br>-->
+
         <a href="#"><img class="iconbar" src="{% static 'images/forum.png' %}"> Форум</a><br>
         <a href="/admin"><img class="iconbar" src="{% static 'images/admin.png' %}"> Управление сервисом</a><br>
 

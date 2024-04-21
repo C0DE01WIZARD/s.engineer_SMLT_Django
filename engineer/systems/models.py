@@ -125,8 +125,21 @@ class Equipment(models.Model):
         verbose_name_plural = 'Оборудования'
 
 
+# TASKS
+class Select_urgency(models.Model):
+    urgency = models.CharField('Срочность задачи', max_length=20)
+
+    def __str__(self):
+        return self.urgency
+
+    class Meta:
+        verbose_name = 'Срочность'
+        verbose_name_plural = 'Срочность'
+
+
 class Tasks(models.Model):
     tasks = models.CharField("Задача", max_length=255)
+    urgency_task = models.ForeignKey(Select_urgency, verbose_name='Срочность', on_delete=models.SET_NULL, null=True)
     datetime = models.DateTimeField("Выполнить до")
 
     def __str__(self):

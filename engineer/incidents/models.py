@@ -1,5 +1,8 @@
 from django.db import models
+
+# from purchase_app.models import *
 from systems.models import *
+
 
 
 
@@ -70,3 +73,22 @@ class Forum(models.Model):
     class Meta:
         verbose_name = 'Тема для обсуждения'
         verbose_name_plural = 'Темы для обсуждения'
+
+class Defect(models.Model):
+    location = models.ForeignKey(Location, verbose_name='Выберите локацию', on_delete=models.SET_NULL, null=True)
+    address = models.ForeignKey(Address, verbose_name='Выберите адрес', on_delete=models.SET_NULL, null=True)
+    system = models.ForeignKey(Systems, verbose_name='Выберите систему', on_delete=models.SET_NULL, null=True)
+    equipment = models.ForeignKey(Equipment, verbose_name='Выберите оборудование', on_delete=models.SET_NULL, null=True)
+    cause = models.CharField('Причина', max_length=100)
+    # purchase = models.ForeignKey(Purchase, verbose_name='Выберите из списка закупку по данной несиправности',
+    #                              on_delete=models.SET_NULL, null=True)
+    elimination_period = models.IntegerField('Срок устранения, в днях')
+    service_company = models.ForeignKey(Service_company, verbose_name='Компания, выполняющая работу',
+                                        on_delete=models.SET_NULL, null=True)
+
+    def __str__(self):
+        return f'{self.location} / {self.address} / {self.system} / {self.cause}'
+
+    class Meta:
+        verbose_name = 'Неисправность'
+        verbose_name_plural = 'Неисправности'
