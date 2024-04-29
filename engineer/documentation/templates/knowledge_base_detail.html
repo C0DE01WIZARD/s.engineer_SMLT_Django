@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+{% load static %}
+{% block main %}
+<title>{{title}}</title>
+<div class="article_detail">
+<h3 align="center">{{knowlegedetail.name}}</h3>
+<img src="{{ knowlegedetail.image.url }}" class="article_img">
+    <h3>{{ knowlegedetail.title }}</h3>
+    <ul>
+        <h4>{{ knowlegedetail.text|safe}}</h4><br>
+
+        {% endblock %}
+    </ul>
+</div>

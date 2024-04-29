@@ -87,6 +87,7 @@ hr{
 .water{
     font-family: 'CoFo Sans', sans-serif;
     margin-left:485px;
+    text-decoration:none;
 }
 
 /*Страница "Закупок" */
@@ -234,7 +235,7 @@ hr{
 .info {
     font-family: 'CoFo Sans', sans-serif;
     font-size:15px;
-    height: 700px;
+    height: auto;
     width: 397px;
     border: 0px solid gray;
     margin-left:863px;
@@ -296,12 +297,27 @@ align: center;
 font-size: 12px;
 padding-bottom: -63px;
 height: 24px;
+text-decoration:none;
 }
 
 .newsphoto{
     width: 100%;
     border-radius: 5px;
 }
+
+.iconbar2{
+    width: 11%;
+  border-radius: 87px;
+}
+
+
+.informations{
+    border:2px solid #007bfb;
+    border-radius:8px;
+    padding:3px;
+
+}
+
 
 /* Страница авторизации */
 .photologin{
@@ -318,8 +334,8 @@ height: 24px;
     background-color:#007bfb;
     color: white;
     border-radius:8px;
-    font-size: 24px;
-    width:90px;
+    font-size: 20px;
+    width:auto;
     text-align: center;
     cursor: pointer;
 }
@@ -351,11 +367,11 @@ height: 24px;
  border-radius: 27px;
   margin-left: 300px;
   margin-top:34px;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 33.333333%;
-    flex: 0 0 20.333333%;
-  width: 15%;
-  height: 45%;
+   /* -webkit-box-flex: 0;
+    -ms-flex: 53.3%;
+    flex: 15%; */
+  max-width: 14%;
+  max-height: 45%;
   box-shadow: 4px 4px 4px 4px gray;
   padding: 9px;
 }
@@ -404,6 +420,7 @@ height: 24px;
     color: #007bfb;
     padding:3px 3px 3px;
     box-shadow: 2px 2px 1px 1px gray;
+    margin-bottom:40px;
 
 }
 
@@ -656,6 +673,7 @@ width:20px;
     color: #007bfb;
     padding:3px 3px 3px;
     box-shadow: 2px 2px 1px 1px gray;
+   margin: 2px 1em 0 auto;
 
 }
 /* Страница "Сервисные КА" */
@@ -744,6 +762,44 @@ width:20px;
 .article_icon{
     max-width: 	100%;
 		height: auto;
+		float:center;
+}
+
+#pagination{
+  font-size: 18px;
+  display: inline-block;
+  width: 50px;
+  height: 39px;
+  padding: 16px 0 0 0;
+  border: px solid #d0d0d0;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #007bfb;
+  color: white;
+  text-decoration: none;
+  margin-top: -7px;
+  margin-left: 12px;
+}
+.paginator{
+  margin-left: 312px;
+  margin-top: 19px;
+  width: 1597px;
+  height: 65px;
+
+}
+
+.article_detail{
+    font-family: 'CoFo Sans', sans-serif;
+    margin-left: 190px;
+    margin-right: auto;
+}
+.article_img{
+    width:auto;
+    height:auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius:8px;
 }
 
  /* Dropdown Button */

@@ -21,6 +21,8 @@ urlpatterns = [
 
     # url django_debug_toolbar
     path("__debug__/", include("debug_toolbar.urls")),
+    # url ckeditor
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
 handler404 = page_not_found  # exception 404 Not found
