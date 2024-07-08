@@ -2,15 +2,7 @@
 {% block main %}
 <title>{{title}}</title>
 <h1 class="titletext" align="center">{{title}}</h1>
-<div class="paginator">
-        <nav>
-            <ul>
-                {% for p in page_obj.paginator.page_range %} <!--                 -->
-                <a href="?page={{p}}" id="pagination">{{p}} </a>
-                {% endfor %}
-            </ul>
-        </nav>
-    </div>
+
 
 <div class="row2">
     {% for knowlege in knowl %}
@@ -22,8 +14,20 @@
         <h4>Тип: {{ knowlege.type_article}}</h4>
         <h4>Дата добавления: {{ knowlege.added}}</h4><br>
 <!--         <h4>{{ knowlege.text|safe}}</h4><br>-->
-        <a href="{{knowlege.url_article}}" class="viewing">Открыть и добавить в план</a>
-    </div>
+        <a href="{{knowlege.url_article}}" class="viewing">Открыть</a>
+
+    </div><br><br>
     {% endfor %}<br><br>
+
+    <div class="paginator">
+        <nav>
+            <ul>
+                {% for p in page_obj.paginator.page_range %} <!--                 -->
+                <a href="?page={{p}}" id="pagination">{{p}} </a>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+
 
     {% endblock %}

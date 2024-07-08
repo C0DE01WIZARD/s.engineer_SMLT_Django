@@ -1,11 +1,12 @@
 #header, .module caption {
     background-color:#007bfb;
-    border-radius: 15px;
+    border-radius:4px;
+    border: 1px solid white;
 }
 
 div.breadcrumbs{
     background-color:#007bfb;
-    border-radius: 15px;
+
 }
 
 .iconbar {
