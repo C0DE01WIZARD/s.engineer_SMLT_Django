@@ -8,5 +8,5 @@ buildings and commercial buildings.
 
 1. Склонируйте репозиторий:
     ```bash
-    git clone [https://github.com/username/repo.git](https://github.com/C0DE01WIZARD/s.engineer_SMLT_Django.git)
+    git clone https://github.com/C0DE01WIZARD/s.engineer_SMLT_Django.git
     ```
